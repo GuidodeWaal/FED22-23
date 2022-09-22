@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Guido de Waal (vervangen door jouw naam)
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Rood
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Surface Plane
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  nintendo.com
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/screenshotsite1.jpg" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/screenshotsite2.jpg" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -56,30 +56,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 1e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Voor blinde mensen is de site slecht geoptimaliseerd. De tabs zijn wel goed. Maar voor sommige tekst en knoppen wordt er vanuit gegaan dat de pagina erbij wordt gezien. Zo is er bijvoorbeeld een knop met Read More. Maar je weet niet waar je meer over gaat lezen.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Een aria label zou een oplossing kunnen zijn voor screenreaders. Zodat blinde mensen weten waar knoppen hun heen leiden als ze er op staan.
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Dit is vrij goed uitgewerkt. Alles wat je kan selecteren heeft een duidelijke tab state. Knoppen hebben zelfs nog een andere tab staat dan li elementen en nav elementen. Elementen zijn duidelijk verspreidt en er is een goed overzicht.
+  
+  Sommige knoppen zouden wat groter kunnen. Vooral in de navigatie.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Met schocks is het wat lastig met de muis het navigatiemenu te navigeren. Deze knoppen zijn relatief wat kleiner.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+ knoppen groter maken.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Het contrast in de site is sterk, donker rood op wit springt goed uit er is ook genoeg ruimte overgelaten om deze er goed uit te laten springen. Knoppen zijn duidelijk knoppen. Iets wat verbetert zou kunnen worden is de items in het carrousel Daar zijn de titels wat klein, waardoor het misschien lastig kan zijn om gemakkelijk te kunnen lezen.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De font size vergroten.
 
 </details>
 
@@ -111,8 +112,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  
+  Bij dit voortgang gesprek was ik helaas niet aanwezig.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -144,7 +145,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  En waren wat html/css onderdelen die ik nog niet echt kende waar ik gebruik van moet maken. Zoals flex order waardoor de volgorde van html elementen kan bepalen zonder dat de screenreader hier last van heeft. 
 
 
   ### Agenda voor meeting
@@ -160,10 +161,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Kijken of ik inderdaad beide openklappende sub menu's erin wil hebben, aangezien dit een hoop moeite kost en het voor lelijke html zorgt.
+  - Extra aandacht besteden aan custom properties.
+  - Er mag maar 1 H1 op de pagina. Ik heb 1 h1 per section.
+
 
 </details>
 
