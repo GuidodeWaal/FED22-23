@@ -2,3 +2,46 @@ html,body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
 }
+
+section:nth-of-type(1) {
+    background-color: red;
+}
+
+article {
+    background-color: green;
+}
+
+section:nth-of-type(2) {
+    background-color: blue;
+}
+
+section:nth-of-type(3) {
+    background-color: purple;
+}
+
+section:nth-of-type(4) {
+    background-color: yellow;
+}
+
+section:nth-of-type(2) ul {
+    display: flex;
+    gap: 1em;
+    overflow: scroll;
+}
+
+/* section:nth-of-type(2)>ul>li {
+
+} */
+
+section:nth-of-type(1) img {
+    width: 100%;
+}
+
+article img {
+    width: 100%;
+}
+
+section:nth-of-type(4) ul {
+    display: flex;
+    flex-flow: column wrap;
+}
