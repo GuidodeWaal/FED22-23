@@ -1,18 +1,207 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* CSS Reset */
+/* ------------------------------------------------------------------------------------------------ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Custom Properties */
+/* ------------------------------------------------------------------------------------------------ */
+
+:root {
+    --red: #e4000f;
+    --grey: rgb(218, 218, 218);
+    --fontcolor: rgb(72, 72, 72);
+    --bg: white;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* General CSS */
+/* ------------------------------------------------------------------------------------------------ */
+
 html,body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
+    position: static;
+    color: var(--fontcolor);
+    background-color: var(--bg);
 }
+
+header {
+    background-color: var(--red);
+    height: 3em;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+header img {
+    height:3em;
+}
+
+a {
+    background-color: var(--red);
+    padding:0.7em 25%;
+    border-radius: .25em;
+    font-size: larger;
+    font-weight: 600;
+    color: var(--bg);
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0 0;
+    text-align: center;
+    background: linear-gradient(rgb(255, 249, 250), rgb(255, 249, 225));
+    padding: 1em 1em 3em 1em;
+    filter:brightness(.9) ;
+    width: 100%;
+}
+
+h2 {
+    font-weight: 600;
+    margin-left: .5em;
+    margin-top: .5em;
+}
+
+section {
+    border-top: .05em solid var(--grey);
+    padding: 1em 0 1em 0;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Banner section */
+/* ------------------------------------------------------------------------------------------------ */
 
 section:nth-of-type(1) {
-    background-color: red;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:1em;
 }
+
+section:nth-of-type(1)>img {
+    width: 100%; 
+}
+
+section:nth-of-type(1) a {
+    position: absolute;
+    top:71%;
+}
+
+/* section:first-of-type a:hover {
+
+} */
+
+section:first-of-type>img:nth-of-type(2) {
+    width:70%;
+    margin-top: 1em;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Featured section */
+/* ------------------------------------------------------------------------------------------------ */
+
+section:nth-of-type(2) ul {
+    display: flex;
+    gap: 1em;
+    overflow: scroll;
+    margin: 1em 0 1em 0;
+}
+
+section:nth-of-type(2)>ul>li {
+    position:relative;
+    list-style-type: none;
+    border: .05em solid var(--grey);
+    border-radius: .3em;
+    width: 15em;
+    margin-top: .5em;
+    transition: .2s;
+}
+
+section:nth-of-type(2)>ul>li:hover {
+    margin-top: 0;
+    color: var(--red);
+}
+
+section:nth-of-type(2)>ul>li:first-of-type {
+    margin-left: 1em;
+}
+
+section:nth-of-type(2)>ul>li:last-of-type {
+    margin-right: 1em;
+}
+
+section:nth-of-type(2)>ul>li>img {
+    position:relative;
+    width:inherit;
+    border-radius: .3em .3em 0 0;
+}
+
+section:nth-of-type(2)>ul>li>p,
+section:nth-of-type(2)>ul>li>h3 {
+    margin:.5em 1em;
+}
+
+section:nth-of-type(2)>ul>li>p {
+    border-left: .2em solid var(--red);
+    padding-left: .25em;
+}
+
+section:nth-of-type(1) img {
+    width: 100%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Store section */
+/* ------------------------------------------------------------------------------------------------ */
 
 article {
-    background-color: green;
+    border-top: .1em solid var(--grey);
+    padding: 1em 0 1em 0;
+    display: flex;
+    flex-direction: column;
 }
 
-section:nth-of-type(2) {
-    background-color: blue;
+article img {
+    margin: 1em;
+}
+
+article p {
+    font-size: large;
+    font-weight: 600;
+    margin: 1em;
+}
+
+article a {
+    padding: 0.7em 30%;
+    align-self: center;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Characters tile section */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+section:nth-of-type(4) ul {
+    display: flex;
+    flex-flow: column wrap;
 }
 
 section:nth-of-type(3) {
@@ -21,27 +210,4 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
     background-color: yellow;
-}
-
-section:nth-of-type(2) ul {
-    display: flex;
-    gap: 1em;
-    overflow: scroll;
-}
-
-/* section:nth-of-type(2)>ul>li {
-
-} */
-
-section:nth-of-type(1) img {
-    width: 100%;
-}
-
-article img {
-    width: 100%;
-}
-
-section:nth-of-type(4) ul {
-    display: flex;
-    flex-flow: column wrap;
 }
