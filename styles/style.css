@@ -222,6 +222,7 @@ section:nth-of-type(4) div {
     border-radius: .25em;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 section:nth-of-type(4) img:first-of-type {
@@ -236,11 +237,13 @@ section:nth-of-type(4) img:nth-of-type(2) {
     transition: .4s;
 }
 
-section:nth-of-type(4) div:hover img:nth-of-type(2) {
+section:nth-of-type(4) div:hover img:nth-of-type(2),
+section:nth-of-type(4) div:active img:nth-of-type(2) {
     scale:1.2;
 }
 
-section:nth-of-type(4) div:hover img:nth-of-type(1) {
+section:nth-of-type(4) div:hover img:nth-of-type(1),
+section:nth-of-type(4) div:active img:nth-of-type(1) {
     scale:1;
 }
 
