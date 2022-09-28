@@ -22,6 +22,7 @@
     --font-regular:400;
     --font-bold:600;
     --divider:.05em;
+    --reset: 0;
 }
 
 
@@ -132,18 +133,20 @@ section:nth-of-type(2) ul {
 }
 
 section:nth-of-type(2)>ul>li {
-    position:relative;
     list-style-type: none;
     border: var(--divider) solid var(--grey);
     border-radius: .3em;
     width: 15em;
     margin-top: .5em;
-    transition: .2s;
+    padding-bottom: 1em;
+    transition:.1s;
+    min-height: 16em; /*Houdt het verspringen van de section tegen bij de transition */
 }
 
 section:nth-of-type(2)>ul>li:hover {
     margin-top: 0;
     color: var(--red);
+    transition:.2s;
 }
 
 section:nth-of-type(2)>ul>li:first-of-type {
@@ -155,7 +158,6 @@ section:nth-of-type(2)>ul>li:last-of-type {
 }
 
 section:nth-of-type(2)>ul>li>img {
-    position:relative;
     width:inherit;
     border-radius: .3em .3em 0 0;
 }
@@ -168,10 +170,6 @@ section:nth-of-type(2)>ul>li>h3 {
 section:nth-of-type(2)>ul>li>p {
     border-left: .2em solid var(--red);
     padding-left: .25em;
-}
-
-section:nth-of-type(1) img {
-    width: 100%;
 }
 
 
@@ -214,25 +212,28 @@ section:nth-of-type(3) {
 
 section:nth-of-type(3) article {
     margin:var(--margin-standard);
-    border-top: 0;
-}
-
-section:nth-of-type(3) article h3 {
-    margin-left: .5em;
+    border-top: var(--reset);
 }
 
 section:nth-of-type(3) article img {
     border-radius: .3em;
+    margin: var(--reset);
 }
 
 section:nth-of-type(3) article a {
-    margin: 0 0 0 1em;
+    margin: var(--reset);
     font-size: medium;
     align-self: baseline;
 }
 
-section:nth-of-type(3) p {
+section:nth-of-type(3) article p {
     font-weight: var(--font-regular);
+    margin: 1em 0 1em 0;
+}
+
+section:nth-of-type(3) ul p {
+    font-weight: var(--font-regular);
+    font-size: small;
 }
 
 section:nth-of-type(3) ul {
@@ -262,24 +263,20 @@ section:nth-of-type(3) img:hover {
 
 section:nth-of-type(3) a {
     font-size: small;
-    padding: 0;
+    padding: var(--reset);
     background-color: var(--bg);
     color: var(--red);
 }
 
-section:nth-of-type(3) p {
-    font-size: small;
-}
-
 section:nth-of-type(3) ul h3 {
     font-size: small;
-    font-weight: 600;
+    font-weight: var(--font-bold);
 }
 
 section:nth-of-type(3)>a {
     text-decoration: none;
     align-self: center;
-    width:90%;
+    justify-self: center;
     background-color: var(--red);
     padding:0.7em 20%;
     border-radius: .25em;
