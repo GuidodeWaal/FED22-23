@@ -89,11 +89,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
-  ### de hele pagina + menu: 
+  ### de hele pagina + menu + carrousel: 
   <img src="readme-images/fed_breakdown_schets_pagina1.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
