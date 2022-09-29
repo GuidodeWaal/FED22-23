@@ -64,7 +64,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Muis en Toetsenbord 
-  Dit is vrij goed uitgewerkt. Alles wat je kan selecteren heeft een duidelijke tab state. Knoppen hebben zelfs nog een andere tab staat dan li elementen en nav elementen. Elementen zijn duidelijk verspreidt en er is een goed overzicht.
+  Dit is vrij goed uitgewerkt. Alles wat je kan selecteren heeft een duidelijke tab state. Knoppen hebben zelfs nog een andere tab staat dan li elementen en nav elementen. Elementen zijn duidelijk verspreidt en er is een goed overzicht. Het contrast op de pagina is ook goed. Koppen hebben een hoog contrast ten opzichte van de achtergrond. En de buttons (rood) hebben net genoeg contrast ten opzichte van de achtergrond.
+  Wel, zijn de nav elementen op de desktop site relatief klein.
   
   Sommige knoppen zouden wat groter kunnen. Vooral in de navigatie.
 
@@ -78,7 +79,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Het contrast in de site is sterk, donker rood op wit springt goed uit er is ook genoeg ruimte overgelaten om deze er goed uit te laten springen. Knoppen zijn duidelijk knoppen. Iets wat verbetert zou kunnen worden is de items in het carrousel Daar zijn de titels wat klein, waardoor het misschien lastig kan zijn om gemakkelijk te kunnen lezen.
+  Het contrast in de site is sterk, donker rood op wit springt goed uit er is ook genoeg ruimte overgelaten om deze er goed uit te laten springen. Knoppen zijn duidelijk knoppen. Iets wat verbetert zou kunnen worden is de items in het carrousel. Daar zijn de titels wat klein, waardoor het misschien lastig kan zijn om gemakkelijk te kunnen lezen. 
 
   De font size vergroten.
 
@@ -168,21 +169,22 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Ik heb sommige elementen de tabindex waarde gegeven. Dit is niet de bedoeling. Ook heb ik nog geen order in mn html en css. Waardoor die de elementen wel chronologisch voorleest, maar dat gaat ten koste van gebruiksvriendelijkheid voor screenreaders.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Alle elementen die tabbaar moeten zijn moet een <a> bevatten ipv tabindex. En ik moet order toevoegen in css en de html volgorde aanpassen om deze goed werkend te krijgen voor screenreaders.
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De focus state is soms niet goed te zien. Dit komt waarschijnlijk door margins en overflows, hier moet ik dus nog even naar kijken. Verder hebben alle interactieve elementen een hover en focus state.
+  <img src="readme-images/focusstate_error.jpg" width="375px" alt="Focusstate niet goed zichtbaar">
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Hoe het precies opgelost kan worden weet ik nog niet, dat moet ik nog even uitproberen. Trial and error.
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Knoppen en de meeste tekst is goed te lezen bij alle brillen. Het enige wat opviel was dat in mijn artikel li elementen wat slechter te lezen waren met de blurrige bril. 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Bij een hover het artikel iets vergroten. Waardoor de tekst beter te lezen is.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
