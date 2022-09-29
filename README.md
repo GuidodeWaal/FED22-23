@@ -105,7 +105,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   
-  En waren wat html/css onderdelen die ik nog niet echt kende waar ik gebruik van moet maken. Zoals flex order waardoor de volgorde van html elementen kan bepalen zonder dat de screenreader hier last van heeft. 
+ Ik heb alle html geschreven, maar nog niet alle content erin gedaan. Ik heb de secties in css verschillende kleuren gegeven zodat er blokken ontstaan en ik makkelijk overzicht heb. Ik heb nog niet heel veel css geschreven.
 
 
   ### Verslag van meeting
@@ -128,6 +128,11 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 
   ### Stand van zaken
   
+  De eerste pagina is bijna af. Ik moet het menu nog coderen mbv javascript en ik moet de footer nog vormgeven.
+  Ik moet flex order nog aanpassen waardoor het voor screenreaders goed gelezen kan worden.
+  Ik heb animaties toegevoegd voor hover states.
+  Na de toegankelijkheid test, ben ik er achter gekomen dat sommige focus states niet goed werken. En dat tabindex niet de bedoeling is.
+  Dit ga ik dus nog aanpassen.
 
 
   ### Agenda voor meeting
