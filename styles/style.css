@@ -30,6 +30,12 @@
 /* General CSS */
 /* ------------------------------------------------------------------------------------------------ */
 
+
+:focus {
+    outline: 3px dashed black;
+    outline-offset: 2px;
+}
+
 html,body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: var(--font-regular);
@@ -52,6 +58,7 @@ header img {
 }
 
 a {
+    text-decoration: none;
     background-color: var(--red);
     padding:0.7em 25%;
     border-radius: .25em;
@@ -139,14 +146,13 @@ section:nth-of-type(2)>ul>li {
     width: 15em;
     margin-top: .5em;
     padding-bottom: 1em;
-    transition:.1s;
+    transition:.2s;
     min-height: 16em; /*Houdt het verspringen van de section tegen bij de transition */
 }
 
 section:nth-of-type(2)>ul>li:hover {
     margin-top: 0;
     color: var(--red);
-    transition:.2s;
 }
 
 section:nth-of-type(2)>ul>li:first-of-type {
@@ -266,6 +272,7 @@ section:nth-of-type(3) a {
     padding: var(--reset);
     background-color: var(--bg);
     color: var(--red);
+    text-decoration: underline;
 }
 
 section:nth-of-type(3) ul h3 {
@@ -274,7 +281,6 @@ section:nth-of-type(3) ul h3 {
 }
 
 section:nth-of-type(3)>a {
-    text-decoration: none;
     align-self: center;
     justify-self: center;
     background-color: var(--red);
@@ -284,6 +290,7 @@ section:nth-of-type(3)>a {
     font-weight: var(--font-bold);
     color: var(--bg);
     cursor: pointer;
+    text-decoration: none;
 }
 
 
