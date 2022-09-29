@@ -15,6 +15,7 @@
 
 :root {
     --red: #e4000f;
+    --darkred: #c51621;
     --grey: rgb(218, 218, 218);
     --fontcolor: rgb(72, 72, 72);
     --bg: white;
@@ -67,6 +68,7 @@ a {
     color: var(--bg);
     margin: 1em 0;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 h1 {
@@ -89,6 +91,28 @@ h2 {
 section {
     border-top: var(--divider) solid var(--grey);
     padding: 1em 0 1em 0;
+}
+
+@keyframes bounce-animation {
+    0% {
+      background-color: var(--red);
+      transform: scaleY(1);
+    }
+    40% {
+      transform:scaleY(1.2)
+    }
+    
+    60% {
+      transform: scaleY(1.5);
+      transform: scaleX(1.05);
+    }
+  
+    100% {
+      background-color: var(--darkred);
+      transform: scaleY(1.2);
+      transform: scaleX(1);
+      transform: scale(1.02);
+    }
 }
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -119,9 +143,14 @@ section:nth-of-type(1) a {
     top:71%;
 }
 
-/* section:first-of-type a:hover {
-
-} */
+section:nth-of-type(1) a:hover {
+    animation-name: bounce-animation;
+    animation-timing-function: ease-out;
+    animation-duration: .5s;
+    transition-delay: .5s;
+    transform: scale(1.02);
+    background-color: var(--darkred);
+}
 
 section:first-of-type>img:nth-of-type(2) {
     width:70%;
@@ -203,6 +232,15 @@ article:first-of-type p {
 article:first-of-type a {
     padding: 0.7em 30%;
     align-self: center;
+}
+
+main>article>a:hover {
+    animation-name: bounce-animation;
+    animation-timing-function: ease-out;
+    animation-duration: .5s;
+    transition-delay: .5s;
+    transform: scale(1.02);
+    background-color: var(--darkred);
 }
 
 
@@ -291,6 +329,15 @@ section:nth-of-type(3)>a {
     color: var(--bg);
     cursor: pointer;
     text-decoration: none;
+}
+
+section:nth-of-type(3)>a:hover {
+    animation-name: bounce-animation;
+    animation-timing-function: ease-out;
+    animation-duration: .5s;
+    transition-delay: .5s;
+    transform: scale(1.02);
+    background-color: var(--darkred);
 }
 
 
