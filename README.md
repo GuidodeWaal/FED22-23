@@ -82,8 +82,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   De font size vergroten.
 
-</details>
-
 
 
 ## Breakdownschets (week 1)
@@ -113,27 +111,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   
-  Bij dit voortgang gesprek was ik helaas niet aanwezig.
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  En waren wat html/css onderdelen die ik nog niet echt kende waar ik gebruik van moet maken. Zoals flex order waardoor de volgorde van html elementen kan bepalen zonder dat de screenreader hier last van heeft. 
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
+  
+  - Kijken of ik inderdaad beide openklappende sub menu's erin wil hebben, aangezien dit een hoop moeite kost en het voor lelijke html zorgt.
+  - Extra aandacht besteden aan custom properties.
+  - Er mag maar 1 H1 op de pagina. Ik heb 1 h1 per section.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
-</details>
+Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op "chronologische" volgorde. Waardoor <img> elementen boven aan staan.
 
 
 
@@ -145,7 +133,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  En waren wat html/css onderdelen die ik nog niet echt kende waar ik gebruik van moet maken. Zoals flex order waardoor de volgorde van html elementen kan bepalen zonder dat de screenreader hier last van heeft. 
+  
 
 
   ### Agenda voor meeting
