@@ -188,9 +188,9 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De meeste dingen waren goed te lezen en te zien met alle brillen. Alleen de artikel li elementen waren wat minder goed te lezen.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Dit kan opgelost worden met een hover state over de li elementen waar het artikeltje iets groter wordt, waardorr het beter te lezen is.
 
 </details>
 
