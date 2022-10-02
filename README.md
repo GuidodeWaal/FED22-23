@@ -149,9 +149,9 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Kijken of ik inderdaad beide openklappende sub menu's erin wil hebben, aangezien dit een hoop moeite kost en het voor lelijke html zorgt.
-  - Extra aandacht besteden aan custom properties.
-  - Er mag maar 1 H1 op de pagina. Ik heb 1 h1 per section.
+  - De afbeeldingen werken niet in microsoft edge. Het bestand type is namelijk avif. Dit wordt niet door internet explorer ondersteunt.
+  - Flex order.
+  - Carrousel items in <a>, niet tabindex.
 
 
 </details>
@@ -203,18 +203,16 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 <details open>
   <summary>uitwerken voor 3e voortgang</summary>
 
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Pagina 1 is af, behalve een klein stukje van de footer. Ik moet een tweede pagina nog vormgeven en css en javascript schrijven voor het "hamburger" menu.
+  Verder moet ik nog de li elementen van de carrousel in <a> elementen zetten en de flexorder aanpassen voor de screenreaders.
+  De css is tot nu toe (volgens mij) in orde. Behalve dus de order.
+  Voor de tweede pagina maak ik een klas aan .pagina2 aan, waardoor ik hem in hetzelfde css bestand kan vormgeven.
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Om te bespreken:
+  Een doorzichtige div als achtergrond voor het menu bij het openklappen?
+  Zo niet, hoe doe ik dat dan?
 
 
   ### Verslag van meeting
