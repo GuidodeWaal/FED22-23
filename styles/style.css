@@ -17,6 +17,7 @@
     --red: #e4000f;
     --darkred: #c51621;
     --grey: rgb(218, 218, 218);
+    --darkgrey: rgb(36, 36, 36);
     --fontcolor: rgb(72, 72, 72);
     --bg: white;
     --margin-standard: 1em;
@@ -25,7 +26,6 @@
     --divider:.05em;
     --reset: 0;
 }
-
 
 /* ------------------------------------------------------------------------------------------------ */
 /* General CSS */
@@ -56,6 +56,10 @@ header {
 
 header img {
     height:3em;
+}
+
+footer {
+    margin-top: 4em;
 }
 
 a {
@@ -126,7 +130,7 @@ section {
 /* Banner section */
 /* ------------------------------------------------------------------------------------------------ */
 
-section:nth-of-type(1) {
+main section:nth-of-type(1) {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -134,16 +138,16 @@ section:nth-of-type(1) {
     margin-top:var(--margin-standard);
 }
 
-section:nth-of-type(1)>img {
+main section:nth-of-type(1)>img {
     width: 100%; 
 }
 
-section:nth-of-type(1) a {
+main section:nth-of-type(1) a {
     position: absolute;
     top:71%;
 }
 
-section:nth-of-type(1) a:hover {
+main section:nth-of-type(1) a:hover {
     animation-name: bounce-animation;
     animation-timing-function: ease-out;
     animation-duration: .5s;
@@ -152,7 +156,7 @@ section:nth-of-type(1) a:hover {
     background-color: var(--darkred);
 }
 
-section:first-of-type>img:nth-of-type(2) {
+main section:first-of-type>img:nth-of-type(2) {
     width:70%;
     margin-top: var(--margin-standard);
 }
@@ -161,14 +165,14 @@ section:first-of-type>img:nth-of-type(2) {
 /* Featured section */
 /* ------------------------------------------------------------------------------------------------ */
 
-section:nth-of-type(2) ul {
+main section:nth-of-type(2) ul {
     display: flex;
     gap: var(--margin-standard);
     overflow: scroll;
     margin: 1em 0 1em 0;
 }
 
-section:nth-of-type(2)>ul>li {
+main section:nth-of-type(2)>ul>li {
     list-style-type: none;
     border: var(--divider) solid var(--grey);
     border-radius: .3em;
@@ -176,33 +180,33 @@ section:nth-of-type(2)>ul>li {
     margin-top: .5em;
     padding-bottom: 1em;
     transition:.2s;
-    min-height: 16em; /*Houdt het verspringen van de section tegen bij de transition */
+    min-height: 16em; /*Houdt het verspringen van de section tegen bij de transition tijdens het switchen van de hover. */
 }
 
-section:nth-of-type(2)>ul>li:hover {
+main section:nth-of-type(2)>ul>li:hover {
     margin-top: 0;
     color: var(--red);
 }
 
-section:nth-of-type(2)>ul>li:first-of-type {
+main section:nth-of-type(2)>ul>li:first-of-type {
     margin-left: var(--margin-standard);
 }
 
-section:nth-of-type(2)>ul>li:last-of-type {
+main section:nth-of-type(2)>ul>li:last-of-type {
     margin-right: var(--margin-standard);
 }
 
-section:nth-of-type(2)>ul>li>img {
+main section:nth-of-type(2)>ul>li>img {
     width:inherit;
     border-radius: .3em .3em 0 0;
 }
 
-section:nth-of-type(2)>ul>li>p,
-section:nth-of-type(2)>ul>li>h3 {
+main section:nth-of-type(2)>ul>li>p,
+main section:nth-of-type(2)>ul>li>h3 {
     margin:.5em 1em;
 }
 
-section:nth-of-type(2)>ul>li>p {
+main section:nth-of-type(2)>ul>li>p {
     border-left: .2em solid var(--red);
     padding-left: .25em;
 }
@@ -404,3 +408,124 @@ section:nth-of-type(4) h3 {
     width:80%;
 }
 
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Footer Section 1 */
+/* ------------------------------------------------------------------------------------------------ */
+
+footer section:first-of-type {
+    background-color: var(--red);
+    height:12em;
+}
+
+footer section:first-of-type ul:first-of-type {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    scale:0.7;
+}
+
+footer section:first-of-type ul:first-of-type li:first-of-type {
+    display: flex;
+    justify-content: center;
+    width:100%;
+    margin: var(--margin-standard);
+}
+
+
+
+footer section:first-of-type ul:first-of-type li {
+    display: flex;
+    justify-content: center;
+    width: 5em;
+    margin: .5em 0;
+    position: relative;
+    align-items: center;
+}
+
+footer section:first-of-type ul:first-of-type li:first-of-type img {
+    width: 15em;
+    position: relative;
+}
+
+footer section:first-of-type ul:first-of-type li img {
+    width: 3em;
+}
+
+footer section:first-of-type ul:first-of-type a {
+    padding: var(--reset);
+    position: relative;
+    margin: var(--reset);
+    font-size: medium;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Footer Section 2 */
+/* ------------------------------------------------------------------------------------------------ */
+
+footer section:nth-of-type(2) {
+    border-style: none;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer section:nth-of-type(2) ul {
+    list-style-type: none;
+    border-left: .05em solid var(--grey);
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+footer section:nth-of-type(2) h3 {
+    font-weight: 600;
+}
+
+footer section:nth-of-type(2) img {
+    height:6em;
+}
+
+footer section:nth-of-type(2)>a {
+    background-color:var(--bg);
+    padding:var(--reset);
+    font-size: medium;
+    margin: var(--reset);
+    cursor: pointer;
+    align-self: center;
+    margin-top: 2em;
+}
+
+footer section:nth-of-type(2) ul li {
+    margin: .5em 0;
+    margin-left: 1em;
+}
+
+footer section:nth-of-type(2) ul a {
+    font-size: medium;
+    padding: var(--reset);
+    background-color: var(--bg);
+    color: var(--red);
+}
+
+footer section:nth-of-type(2) ul a:hover {
+    color: var(--darkred);
+    text-decoration: underline;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Footer Section 3 */
+/* ------------------------------------------------------------------------------------------------ */
+
+footer section:nth-of-type(3) {
+    background-color: var(--darkgrey);
+}
