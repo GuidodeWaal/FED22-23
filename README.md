@@ -264,7 +264,7 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
   1. https://css-tricks.com/content-jumping-avoid/
-  2. bron 2
+  2. pngitem.com (voor de logo's van de footer.
   3. ...
 
 </details>
