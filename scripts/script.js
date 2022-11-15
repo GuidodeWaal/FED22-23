@@ -6,6 +6,15 @@
 
 
 //------------------------------------------
+// Navigatie values
+//------------------------------------------
+
+const nav = document.getElementById("nav2");
+const backdrop = document.getElementById("backdrop");
+const hamburger = document.getElementById("hamburger");
+const close = document.querySelector("button");
+
+//------------------------------------------
 // Media section values
 //------------------------------------------
 
@@ -25,6 +34,16 @@ const screenshot5 = document.getElementById("screenshot5");
 //==========================================
 //==========================================
 
+
+//------------------------------------------
+// Navigatie functions
+//------------------------------------------
+
+function uitklap (){
+    backdrop.classList.toggle("backdrop");
+    nav.classList.toggle("navuit");
+    console.log("Hello world!");
+}
 
 //------------------------------------------
 // Media section functions
@@ -62,6 +81,14 @@ function changeto5 (){
 //==========================================
 //==========================================
 
+
+//------------------------------------------
+// Navigatie events
+//------------------------------------------
+
+hamburger.addEventListener("click", uitklap);
+backdrop.addEventListener("click", uitklap);
+close.addEventListener("click", uitklap);
 
 //------------------------------------------
 // Media section events

@@ -27,7 +27,10 @@
     --reset: 0;
 
 
-    --backgroundblabal: var(--red);
+    --colorheader: var(--red);
+    --buttonred: var(--red);
+    --activebuttonred: var(--darkred);
+    --dividercolor: var(--grey);
 }
 
 
@@ -56,7 +59,7 @@ header {
     height: 3em;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
 }
 
 header img {
@@ -131,14 +134,161 @@ nav ul {
     width: 95%;
     background-color: white;
     border-radius: 5em;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0.25rem 0.5rem 0px;
+    box-shadow: rgb(0 0 0 / 40%) 0px 0.25rem 0.5rem 0px;
+    list-style: none;
+    z-index: 3;
+}
+
+nav ul:first-of-type {
+    justify-content: space-around;
+}
+
+nav li {
+    height: 3em;
+    margin-top: .3em;
+}
+
+nav ul a li:nth-of-type(3) {
+    background-color: var(--red);
+    padding: 1em;
+}
+
+nav img {
+    scale: 0.6;
+}
+
+nav a:nth-of-type(3) img {
+    position: relative;
+    bottom: .3em;
 }
 
 nav a {
-    padding: 0;
-    background-color: white;
+    padding: var(--reset);
+    background: none;
+    font-size: medium;
+    margin: var(--reset);
 }
 
+nav a:nth-of-type(3) {
+    background-color: var(--red);
+    scale:1.3;
+    height: 3em;
+    width: 3em;
+    border-radius: 3em;
+    position: relative;
+    bottom: .3em;
+}
+
+nav a:nth-of-type(1), nav a:nth-of-type(5) {
+    scale:1.2;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Navigatie opengeklapt*/
+/* ------------------------------------------------------------------------------------------------ */
+
+
+
+
+nav button {
+    all: unset;
+    position: absolute;
+    right: .4em;
+    top: .4em;
+    scale: 1.1;
+}
+
+nav div {
+    height: 100vh;
+    width: 100vh;
+    background-color: rgba(0, 0, 0);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    position: fixed;
+    top: 3em;
+    transition: .3s ease-out;
+}
+
+nav ul:nth-of-type(2) {
+    z-index: 2;
+    height: 0;
+    visibility: hidden;
+    border-radius: 1em 1em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    background-color: rgb(239, 239, 239);
+    overflow-y: scroll;
+    transition: .3s ease-in;
+}
+
+.backdrop {
+    opacity:0.6;
+}
+
+.navuit {
+    height: 65% !important;
+    visibility: visible !important;
+}
+
+nav ul:nth-of-type(2) li {
+    border-bottom: .05em solid lightgrey;
+    height: 3.5em;
+    background-color: var(--bg);
+    margin-top: var(--reset);
+}
+
+nav ul:nth-of-type(2) li:first-of-type {
+    border-radius: 1em 1em 0 0;
+}
+
+nav ul:nth-of-type(2) li:nth-of-type(2) {
+    margin-top: 4em;
+}
+
+nav ul:nth-of-type(2) li:nth-of-type(8) {
+    margin-top: 1em;
+    border-top: .05em solid lightgrey;
+}
+
+nav ul:nth-of-type(2) li img {
+    margin-top: .2em;
+    margin-left: 1em;
+}
+
+nav ul:nth-of-type(2) li h3 {
+    font-weight: 600;
+}
+
+nav ul:nth-of-type(2) li:first-of-type {
+    padding-bottom: .8em;
+    position: fixed;
+    height: 4em;
+    width: 95%;
+    background-color: var(--bg);
+    z-index: 5;
+}
+
+nav ul:nth-of-type(2) li:nth-of-type(9) a {
+    padding-bottom: 6em;
+}
+
+nav ul:nth-of-type(2) li:first-of-type a{
+    justify-content: center;
+}
+
+nav ul:nth-of-type(2) a {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul:nth-of-type(2) h2 {
+    margin: 0;
+    margin-top: .6em;
+}
 
 
 
