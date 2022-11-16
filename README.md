@@ -233,9 +233,9 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/pagina1voorbeeld.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/pagina2voorbeeld.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/paginanavvoorbeeld.png" width="375px" alt="uitomst opdracht 1">
   
 
 
@@ -261,7 +261,7 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   En ik kan de bug niet vinden. Ik heb geprobeerd met element inspecteren te kijken, code aangepast, teruggekeken naar inherits, maar ik kon niets vinden.
   Wat ik erg jammer vindt. Omdat, het natuurlijk an sich niet erg ingewikkeld is.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/lelijkefocusstate.png" width="375px" alt="bummer">
 </details>
 
 
