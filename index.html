@@ -1,104 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logos/retromario.png">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Vervangt het website logo in de browser -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Nintendo Unofficial Site | By Guido de Waal</title>
 </head>
+
 <body>
     <header>
-        <img src="images/logos/nintendologo.jpg" alt="nintendo logo" tabindex="0">
+        <a href="#">
+            <img src="images/logos/nintendologo.jpg" alt="nintendo logo">
+        </a>
         <nav>
+            <!-- Navigatie menu -->
             <ul>
-                <a id="hamburger">
+                <button id="hamburger" aria-label="Open Sub-Menu">
+                    <!-- Aria-label zorgt ervoor dat er een custom tekst wordt uitgesproken door een screenreader. -->
                     <li>
-                        <img src="images/icons/hamburger.png" alt="hamburger icon">
+                        <img src="images/icons/hamburger.png" alt="Open Sub-Menu">
+                    </li>
+                </button>
+                <a href="#" aria-label="Go to favourites">
+                    <li>
+                        <img src="images/icons/heart.png" alt="Go to Favourites">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Search">
                     <li>
-                        <img src="images/icons/heart.png" alt="heart icon">
+                        <img src="images/icons/search.png" alt="Search">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Go to Shoppingcart">
                     <li>
-                        <img src="images/icons/search.png" alt="search icon">
+                        <img src="images/icons/shoppingcart.png" alt="Go to Shoppingcart">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="My Account">
                     <li>
-                        <img src="images/icons/shoppingcart.png" alt="shoppingcart icon">
-                    </li>
-                </a>
-                <a href="#">
-                    <li>
-                        <img src="images/icons/miiicon.png" alt="mii icon">
+                        <img src="images/icons/miiicon.png" alt="My Account">
                     </li>
                 </a>
             </ul>
-            <div id="backdrop"></div> <!-- Zwarte achtergrond voor het uitgeklapte menu -->
+            <div id="backdrop"></div> 
+                <!-- Zwarte achtergrond voor het uitgeklapte menu -->
             <ul id="nav2">
+                <!-- Navigatie Sub-Menu -->
                 <li>
                     <a>
                         <h2>Menu</h2>
-                        <button>
+                        <button id="close" aria-label="Close Sub-Menu">
                             <img src="images/icons/close.png" alt="Close Menu">
                         </button>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/mynintendo.png" alt="My Nintendo Store">
+                    <a href="#" aria-label="My Nintendo Store">
                         <h3>My Nintendo Store</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/mynintendo.png" alt="My Nintendo Store">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/holiday.png" alt="">
+                    <a href="#" aria-label="Holiday Gift Guide">
                         <h3>Holiday Gift Guide</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/holiday.png" alt="Holdiday gift guide">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/games.png" alt="">
+                    <a href="#" aria-label="Games">
                         <h3>Games</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/games.png" alt="Games">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/switch.png" alt="">
+                    <a href="#" aria-label="Nintendo Switch">
                         <h3>Nintendo Switch</h3>
+                        <img src="images/icons/switch.png" alt="Nintendo Switch">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/news.png" alt="">
+                    <a href="#" aria-label="News & Events">
                         <h3>News & Events</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/news.png" alt="News & Events">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/playnintendo.png" alt="">
+                    <a href="#" aria-label="Play Nintendo">
                         <h3>Play Nintendo</h3>
+                        <img src="images/icons/playnintendo.png" alt="Play Nintendo">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/support.png" alt="">
+                    <a href="#" aria-label="Support">
                         <h3>Support</h3>
-                        </a>
+                        <img src="images/icons/support.png" alt="Support">
+                    </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/flag.png" alt="">
+                    <a href="#" aria-label="Change Region">
+                        <img src="images/icons/flag.png" alt="Change Region">
                         <h3>Change Region</h3>
                     </a>
                 </li>
@@ -108,9 +115,9 @@
 
     <main>
         <section>
-            <img src="images/splatoonbanner.avif" alt="splatoonbanner">
+            <img src="images/splatoonbanner.avif" alt="Splatoon 3 Banner">
             <h1>
-                Ink up the Splatlands in Splatoon™ 3! 
+                Ink up the Splatlands in Splatoon™ 3!
             </h1>
             <a href="#">Available now</a>
             <img src="images/esrb.png" alt="esrb rating everyone 10+">
@@ -121,29 +128,37 @@
         <!-- Featured Carrousel -->
         <!-- -------------------------------------------------------------------------------------- -->
 
-        <section> 
+        <section>
             <h2>
                 Featured
             </h2>
             <ul>
-                <li tabindex="0">
-                    <img src="images/featured1.avif" alt="Blockbuster Sale">
-                    <h3>Sale ends 9/25 at 11:59 p.m. PT - Shop now</h3>
-                </li>
-                <li tabindex="0">
-                    <img src="images/featured2.png" alt="Nintendo direct">
-                    <h3>Check out the presentation</h3>
-                </li>
-                <li tabindex="0">
-                    <img src="images/featured3.avif" alt="Pokemon scarlet and Pokemon Violet">
-                    <h3>Pokémon Scarlet and Pokémon Violet</h3>
-                    <p>Nintendo Switch</p>
-                </li>
-                <li tabindex="0">
-                    <img src="images/featured4.avif" alt="Pikmin 3">
-                    <h3>Get Pikmin™ 3 Deluxe for 30% off! – Shop now</h3>
-                    <p>Nintendo Switch</p>
-                </li>
+                <a href="#" aria-label="Blockbuster Sale - Shop now">
+                    <li>
+                        <h3>Sale ends 9/25 at 11:59 p.m. PT - Shop now</h3>
+                        <img src="images/featured1.avif" alt="Blockbuster Sale">
+                    </li>
+                </a>
+                <a href="#" aria-label="Check out the new Nintendo Direct">
+                    <li>
+                        <h3>Check out the presentation</h3>
+                        <img src="images/featured2.png" alt="Nintendo direct">
+                    </li>
+                </a>
+                <a href="#" aria-label="Pokemon Scarlet and Pokemon Violet">
+                    <li>
+                        <h3>Pokémon Scarlet and Pokémon Violet</h3>
+                        <p>Nintendo Switch</p>
+                        <img src="images/featured3.avif" alt="Pokemon scarlet and Pokemon Violet">
+                    </li>
+                </a>
+                <a href="#" aria-label="Get Pikmin 3 Deluxe for 30% off">
+                    <li>
+                        <h3>Get Pikmin™ 3 Deluxe for 30% off! – Shop now</h3>
+                        <p>Nintendo Switch</p>
+                        <img src="images/featured4.avif" alt="Pikmin 3">
+                    </li>
+                </a>
             </ul>
 
         </section>
@@ -157,9 +172,9 @@
             <h2>
                 Online Store
             </h2>
-            <img src="images/store.png" alt="store image">
             <p>Shop games, exclusive Nintendo merchandise, and more! Plus, get free shipping on orders $50 and over.</p>
             <a href="#">Start shopping</a>
+            <img src="images/store.png" alt="store image">
         </article>
 
 
@@ -167,55 +182,57 @@
         <!-- News -->
         <!-- -------------------------------------------------------------------------------------- -->
 
-        
+
         <section>
             <h2>News</h2>
             <article>
-                <img src="images/newsbanner1.avif" alt="Tunic">
                 <time>
                     <p>09/27/22</p>
                 </time>
                 <h3>Available now! Set out on a big adventure as a small fox in TUNIC</h3>
-                <p>Explore a land filled with lost legends, ancient powers, and ferocious monsters inTUNIC, an isometric action game. Stranded in a ruined land, and...</p>
+                <p>Explore a land filled with lost legends, ancient powers, and ferocious monsters inTUNIC, an isometric
+                    action game. Stranded in a ruined land, and...</p>
                 <a href="#" aria-label="Read more about Tunic">Read More</a>
+                <img src="images/newsbanner1.avif" alt="Tunic">
             </article>
             <ul>
                 <li>
-                    <img src="images/newsbanner2.avif" alt="Beary Good Games">
                     <time>
+                        <!-- De computer registreert dit als een datum -->
                         <p>09/26/22</p>
                     </time>
                     <h3>You’re in fur a treat with these games!</h3>
                     <a href="#" aria-label="Read more about beary good games">Read More</a>
+                    <img src="images/newsbanner2.avif" alt="Beary Good Games">
                 </li>
                 <li>
-                    <img src="images/newsbanner5.avif" alt="Splatoon 3 Splatfest">
                     <time>
                         <p>09/23/22</p>
                     </time>
                     <h3>Rep your team when the Splatoon 3 deserted island Splatfest begins today at 5:00 p.m. PT!</h3>
                     <a href="#" aria-label="Read more about Splatoon 3 Splatfest">Read More</a>
+                    <img src="images/newsbanner5.avif" alt="Splatoon 3 Splatfest">
                 </li>
                 <li>
-                    <img src="images/newsbanner3.jfif" alt="Pikmon 3 Deluxe">
                     <time>
                         <p>09/23/22</p>
                     </time>
                     <h3>Save 30% on Pikmin™ 3 Deluxe!</h3>
                     <a href="#" aria-label="Read more about Pikmin 3 Deluxe sale">Read More</a>
+                    <img src="images/newsbanner3.jfif" alt="Pikmon 3 Deluxe">
                 </li>
                 <li>
-                    <img src="images/newsbanner 4.avif" alt="Taiko no Tatsujin">
                     <time>
                         <p>09/23/22</p>
                     </time>
                     <h3>Get ready to drum to the beat in Taiko no Tatsujin: Rhythm Festival</h3>
                     <a href="#" aria-label="Read more about Taiko no Tatsujin: Rhythm Festival">Read More</a>
+                    <img src="images/newsbanner 4.avif" alt="Taiko no Tatsujin">
                 </li>
             </ul>
             <a href="#">See all news articles</a>
         </section>
-        
+
 
 
         <!-- -------------------------------------------------------------------------------------- -->
@@ -225,34 +242,46 @@
         <section>
             <h2>Characters</h2>
             <ul>
-                <li>
-                    <div tabindex="0">
-                        <img src="images/characters/background1.avif" alt="mario background">
-                        <img src="images/characters/mario.avif" alt="mario">
-                    </div>
-                    <h3>Super Mario™️</h3>
-                </li>
-                <li>
-                    <div tabindex="0">
-                        <img src="images/characters/background2.avif" alt="zelda background">
-                        <img src="images/characters/zelda.avif" alt="zelda">
-                    </div>
-                    <h3>The Legend of Zelda™️</h3>
-                </li>
-                <li>
-                    <div tabindex="0">
-                        <img src="images/characters/background3.avif" alt="splatoon background">
-                        <img src="images/characters/splatoon.avif" alt="splatoon">
-                    </div>
-                    <h3>Splatoon™</h3>
-                </li>
-                <li>
-                    <div tabindex="0">
-                        <img src="images/characters/background4.avif" alt="kirby background">
-                        <img src="images/characters/kirby.avif" alt="kirby">
-                    </div>
-                    <h3>Kirby™️</h3>
-                </li>
+                <a href="#" aria-label="Super Mario">
+                    <li>
+                        <h3>Super Mario™️</h3>
+                        <div>
+                            <!-- De container voor overflow hidden. Voor de foto animaties. -->
+                            <img src="images/characters/background1.avif" alt="mario background">
+                            <img src="images/characters/mario.avif" alt="mario">
+                        </div>
+                    </li>
+                </a>
+                <a href="#" aria-label="The Legend of Zelda">
+                    <li>
+                        <h3>The Legend of Zelda™️</h3>
+                        <div>
+                            <!-- De container voor overflow hidden. Voor de foto animaties. -->
+                            <img src="images/characters/background2.avif" alt="zelda background">
+                            <img src="images/characters/zelda.avif" alt="zelda">
+                        </div>
+                    </li>
+                </a>
+                <a href="#" aria-label="Splatoon">
+                    <li>
+                        <h3>Splatoon™</h3>
+                        <div>
+                            <!-- De container voor overflow hidden. Voor de foto animaties. -->
+                            <img src="images/characters/background3.avif" alt="splatoon background">
+                            <img src="images/characters/splatoon.avif" alt="splatoon">
+                        </div>
+                    </li>
+                </a>
+                <a href="#" aria-label="Kirby">
+                    <li>
+                        <h3>Kirby™️</h3>
+                        <div>
+                            <!-- De container voor overflow hidden. Voor de foto animaties. -->
+                            <img src="images/characters/background4.avif" alt="kirby background">
+                            <img src="images/characters/kirby.avif" alt="kirby">
+                        </div>
+                    </li>
+                </a>
             </ul>
         </section>
 
@@ -290,7 +319,7 @@
                 <li>
                     <a href="https://www.youtube.com/nintendo" aria-label="Link to Nintendo's Youtube">
                         <img src="images/logos/youtube_logo_footer.png" alt="Youtube Logo">
-                    </a> 
+                    </a>
                 </li>
             </ul>
         </section>
@@ -326,33 +355,41 @@
                     <a href="#">Nintendo Product Recycling</a>
                 </li>
             </ul>
-            <a href="https://www.esrb.org/EPCConfirm/891/">
+            <a href="https://www.esrb.org/EPCConfirm/891/" aria-label="Go to ESRB's website">
                 <img src="images/esrb_privacy.png" alt="esrb privacy link">
             </a>
         </section>
         <section>
             <p>
-
+                © Nintendo.
+                Games are property of their respective owners.
+                Nintendo of America Inc. Headquarters are in Redmond, Washington, USA
             </p>
             <ul>
                 <li>
-
+                    <a href="#">
+                        Contact us
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Website feedback
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Terms of Use
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Documents & Policies
+                    </a>
                 </li>
             </ul>
-
-            <img src="" alt="">
-            <p></p>
         </section>
     </footer>
-<script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script> <!-- Linkt het javascript bestand aan het html bestand. -->
 </body>
+
 </html>

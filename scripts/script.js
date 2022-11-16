@@ -12,7 +12,8 @@
 const nav = document.getElementById("nav2");
 const backdrop = document.getElementById("backdrop");
 const hamburger = document.getElementById("hamburger");
-const close = document.querySelector("button");
+const close = document.getElementById("close");
+const bodymain = document.querySelector("html,body");
 
 //------------------------------------------
 // Media section values
@@ -27,7 +28,6 @@ const screenshot4 = document.getElementById("screenshot4");
 const screenshot5 = document.getElementById("screenshot5");
 
 
-
 //==========================================
 //==========================================
 // FUNCTIONS
@@ -39,40 +39,41 @@ const screenshot5 = document.getElementById("screenshot5");
 // Navigatie functions
 //------------------------------------------
 
-function uitklap (){
+function uitklap() {
     backdrop.classList.toggle("backdrop");
     nav.classList.toggle("navuit");
     console.log("Hello world!");
+    bodymain.classList.toggle("disabled");
 }
+
 
 //------------------------------------------
 // Media section functions
 //------------------------------------------
 
-function changeto0 (){
+function changeto0() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot0.avif";
 }
 
-function changeto1 (){
+function changeto1() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot1.avif";
 }
 
-function changeto2 (){
+function changeto2() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot2.avif";
 }
 
-function changeto3 (){
+function changeto3() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot3.avif";
 }
 
-function changeto4 (){
+function changeto4() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot4.avif";
 }
 
-function changeto5 (){
+function changeto5() {
     document.getElementById("Mainscreenshot").src = "images/pagina2/screenshot5.avif";
 }
-
 
 
 //==========================================
@@ -89,6 +90,7 @@ function changeto5 (){
 hamburger.addEventListener("click", uitklap);
 backdrop.addEventListener("click", uitklap);
 close.addEventListener("click", uitklap);
+
 
 //------------------------------------------
 // Media section events

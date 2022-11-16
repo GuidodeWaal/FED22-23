@@ -2,7 +2,9 @@
 /* CSS Reset */
 /* ------------------------------------------------------------------------------------------------ */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -19,18 +21,33 @@
     --grey: rgb(218, 218, 218);
     --darkgrey: rgb(36, 36, 36);
     --fontcolor: rgb(72, 72, 72);
-    --bg: white;
+    --backgroundwhite: white;
     --margin-standard: 1em;
-    --font-regular:400;
-    --font-bold:600;
-    --divider:.05em;
+    --font-regular: 400;
+    --font-bold: 600;
+    --divider: .05em;
     --reset: 0;
+    --focus-outline: 3px dashed black;
+    --navboxshadow: rgb(0 0 0 / 40%) 0px 0.25rem 0.5rem 0px;
+    --navbackgroundgrey: rgb(239, 239, 239);
+    --black: rgba(0, 0, 0);
+    --pokemon-bg1: url("../images/pagina2/sectionbackground.avif");
+    --pokemon-bg2: url("../images/pagina2/sectionbackground2.avif");
+    --borderbottom: .05em solid lightgrey;
 
 
     --colorheader: var(--red);
+    --fontred: var(--red);
     --buttonred: var(--red);
     --activebuttonred: var(--darkred);
     --dividercolor: var(--grey);
+    --background-site: var(--backgroundwhite);
+    --listitemwhite: var(--backgroundwhite);
+    --fontwhite: var(--backgroundwhite);
+    --dividergrey: var(--grey);
+    --backdropblack: var(--black);
+    --footerred: var(--red);
+    --footerdarkgrey: var(--darkgrey);
 }
 
 
@@ -41,29 +58,44 @@
 
 
 :focus {
-    outline: 3px dashed black;
-    outline-offset: 2px;
+    outline: var(--focus-outline) !important;
 }
 
-html,body {
+:focus:not(:focus-visible) {
+    outline: none !important;
+    /* Zorgt ervoor dat er als er met de muis geklikt wordt er geen focus state verschijnt. */
+}
+
+.disabled {
+    overflow-y: hidden;
+    /* zorgt ervoor dat de pagina niet meer scrollbaar is als het menu is opengeklapt */
+}
+
+html,
+body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: var(--font-regular);
     overflow-x: hidden;
     position: static;
     color: var(--fontcolor);
-    background-color: var(--bg);
+    background-color: var(--background-site);
 }
 
 header {
-    background-color: var(--red);
+    background-color: var(--colorheader);
     height: 3em;
     width: 100%;
     position: fixed;
     z-index: 5;
 }
 
+header>a {
+    all: unset;
+    /* Reset alle inherited waarden */
+}
+
 header img {
-    height:3em;
+    height: 3em;
 }
 
 footer {
@@ -72,14 +104,16 @@ footer {
 
 a {
     text-decoration: none;
-    background-color: var(--red);
-    padding:0.7em 25%;
+    /* Verwijderd de standaard text decoration */
+    background-color: var(--buttonred);
+    padding: 0.7em 25%;
     border-radius: .25em;
     font-size: larger;
     font-weight: var(--font-bold);
-    color: var(--bg);
+    color: var(--fontwhite);
     margin: 1em 0;
     cursor: pointer;
+    /* Zorgt ervoor dat de muis een pointer wordt op hover */
     transition: 0.2s;
 }
 
@@ -90,30 +124,33 @@ h2 {
 }
 
 section {
-    border-top: var(--divider) solid var(--grey);
+    border-top: var(--divider) solid var(--dividergrey);
     padding: 1em 0 1em 0;
 }
 
 @keyframes bounce-animation {
     0% {
-      background-color: var(--red);
-      transform: scaleY(1);
+        background-color: var(--buttonred);
+        transform: scaleY(1);
     }
+
     40% {
-      transform:scaleY(1.2)
+        transform: scaleY(1.2)
     }
-    
+
     60% {
-      transform: scaleY(1.5);
-      transform: scaleX(1.05);
+        transform: scaleY(1.5);
+        transform: scaleX(1.05);
     }
-  
+
     100% {
-      background-color: var(--darkred);
-      transform: scaleY(1.2);
-      transform: scaleX(1);
-      transform: scale(1.02);
+        background-color: var(--activebuttonred);
+        transform: scaleY(1.2);
+        transform: scaleX(1);
+        transform: scale(1.02);
     }
+
+    /* Bounce animatie op basis van scale x en y */
 }
 
 
@@ -129,37 +166,16 @@ nav {
 nav ul {
     display: flex;
     position: fixed;
-    bottom: 1em;
+    bottom: var(--margin-standard);
     height: 3.6em;
     width: 95%;
-    background-color: white;
+    background-color: var(--backgroundwhite);
     border-radius: 5em;
-    box-shadow: rgb(0 0 0 / 40%) 0px 0.25rem 0.5rem 0px;
+    box-shadow: var(--navboxshadow);
+    /* Geeft de schaduw onder het menu */
     list-style: none;
+    /* Verwijderd de list style */
     z-index: 3;
-}
-
-nav ul:first-of-type {
-    justify-content: space-around;
-}
-
-nav li {
-    height: 3em;
-    margin-top: .3em;
-}
-
-nav ul a li:nth-of-type(3) {
-    background-color: var(--red);
-    padding: 1em;
-}
-
-nav img {
-    scale: 0.6;
-}
-
-nav a:nth-of-type(3) img {
-    position: relative;
-    bottom: .3em;
 }
 
 nav a {
@@ -169,9 +185,57 @@ nav a {
     margin: var(--reset);
 }
 
-nav a:nth-of-type(3) {
-    background-color: var(--red);
-    scale:1.3;
+nav li {
+    height: 3em;
+    margin-top: .3em;
+}
+
+nav img {
+    scale: 0.6;
+}
+
+nav ul:first-of-type button {
+    all: unset;
+    padding: var(--reset);
+    background: none;
+    font-size: medium;
+    margin: var(--reset);
+}
+
+nav ul:first-of-type button:focus {
+    outline: var(--focus-outline);
+}
+
+nav ul:first-of-type button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+nav ul:first-of-type button li {
+    margin-top: var(--reset);
+}
+
+nav ul:first-of-type button li img {
+    scale: .8;
+}
+
+nav ul a li:nth-of-type(2) {
+    background-color: var(--fontred);
+    padding: var(--margin-standard);
+}
+
+nav ul:first-of-type {
+    justify-content: space-around;
+    /* Zorgt ervoor dat de ruimte eerlijk verdeeld wordt rondom de list elementen */
+}
+
+nav a:nth-of-type(2) img {
+    position: relative;
+    bottom: .3em;
+}
+
+nav a:nth-of-type(2) {
+    background-color: var(--fontred);
+    scale: 1.3;
     height: 3em;
     width: 3em;
     border-radius: 3em;
@@ -179,35 +243,33 @@ nav a:nth-of-type(3) {
     bottom: .3em;
 }
 
-nav a:nth-of-type(1), nav a:nth-of-type(5) {
-    scale:1.2;
+nav a:nth-of-type(4) {
+    scale: 1.2;
 }
+
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Navigatie opengeklapt*/
 /* ------------------------------------------------------------------------------------------------ */
 
-
-
-
-nav button {
-    all: unset;
-    position: absolute;
-    right: .4em;
-    top: .4em;
-    scale: 1.1;
-}
-
 nav div {
     height: 100vh;
+    /* Zorgt ervoor dat het hele scherm ingenomen wordt */
     width: 100vh;
-    background-color: rgba(0, 0, 0);
+    /* Zorgt ervoor dat het hele scherm ingenomen wordt */
+    background-color: var(--backdropblack);
     opacity: 0;
     z-index: 2;
     pointer-events: none;
     position: fixed;
     top: 3em;
     transition: .3s ease-out;
+}
+
+.backdrop {
+    opacity: 0.6;
+    /* Zorgt ervoor dat mbv javascript de opacity omhoog gaat. */
+    cursor: pointer;
 }
 
 nav ul:nth-of-type(2) {
@@ -218,29 +280,62 @@ nav ul:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     justify-content: none;
-    background-color: rgb(239, 239, 239);
+    background-color: var(--navbackgroundgrey);
     overflow-y: scroll;
     transition: .3s ease-in;
 }
 
-.backdrop {
-    opacity:0.6;
-}
-
 .navuit {
     height: 65% !important;
+    /* zonder de !important overwrite hij de height niet. */
     visibility: visible !important;
+    /* fixt deels een bug waardoor ul2 the zien is als het menu is ingeklapt. */
+
+    /* Omdat !important op beide staat worden ze beide geforceerd. */
+}
+
+nav ul:nth-of-type(2) h2 {
+    margin: var(--reset);
+    margin-top: .6em;
+}
+
+nav ul:nth-of-type(2) button {
+    all: unset;
+    position: absolute;
+    right: .4em;
+    top: .4em;
+    scale: 1.1;
+}
+
+nav ul:nth-of-type(2) a {
+    all: unset;
+    /* Reset alle css properties */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul:nth-of-type(2) a:focus {
+    outline-offset: -.25em;
+    /* Zorgt ervoor dat de focus state goed zichtbaar is. */
 }
 
 nav ul:nth-of-type(2) li {
-    border-bottom: .05em solid lightgrey;
+    border-bottom: var(--borderbottom);
     height: 3.5em;
-    background-color: var(--bg);
+    background-color: var(--background-site);
     margin-top: var(--reset);
 }
 
 nav ul:nth-of-type(2) li:first-of-type {
+    position: fixed;
     border-radius: 1em 1em 0 0;
+    padding-bottom: .8em;
+    height: 4em;
+    width: 95%;
+    background-color: var(--background-site);
+    z-index: 5;
+    /* Zorgt ervoor dat het element helemaal vooraan staat. */
 }
 
 nav ul:nth-of-type(2) li:nth-of-type(2) {
@@ -255,41 +350,21 @@ nav ul:nth-of-type(2) li:nth-of-type(8) {
 nav ul:nth-of-type(2) li img {
     margin-top: .2em;
     margin-left: 1em;
+    order: -1;
+    /* Flexorder zorgt voor de visuele order. */
 }
 
 nav ul:nth-of-type(2) li h3 {
     font-weight: 600;
 }
 
-nav ul:nth-of-type(2) li:first-of-type {
-    padding-bottom: .8em;
-    position: fixed;
-    height: 4em;
-    width: 95%;
-    background-color: var(--bg);
-    z-index: 5;
+nav ul:nth-of-type(2) li:first-of-type a {
+    justify-content: center;
 }
 
 nav ul:nth-of-type(2) li:nth-of-type(9) a {
     padding-bottom: 6em;
 }
-
-nav ul:nth-of-type(2) li:first-of-type a{
-    justify-content: center;
-}
-
-nav ul:nth-of-type(2) a {
-    all: unset;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-nav ul:nth-of-type(2) h2 {
-    margin: 0;
-    margin-top: .6em;
-}
-
 
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -305,10 +380,12 @@ nav ul:nth-of-type(2) h2 {
 
 main section:nth-of-type(1) {
     position: relative;
+    /* Maakt het element de parent. */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:var(--margin-standard);
+    /* Zorgt ervoor dat elementen horizontaal gecentreerd zijn. */
+    margin-top: var(--margin-standard);
 }
 
 main section:first-of-type h1 {
@@ -316,32 +393,39 @@ main section:first-of-type h1 {
     font-weight: var(--font-bold);
     margin: 0 0;
     text-align: center;
+    /* Zorgt ervoor dat de tekst in het midden van de pagina staat. */
     background: linear-gradient(rgb(255, 249, 250), rgb(255, 249, 225));
+    /* Zorgt voor de kleur overgang achter de titel */
     padding: 1em 1em 3em 1em;
-    filter:brightness(.9) ;
+    filter: brightness(.9);
+    /* Verfijnt de kleur van de linear gradient die ik wilde. */
     width: 100%;
-}
-
-main section:nth-of-type(1)>img {
-    width: 100%; 
 }
 
 main section:nth-of-type(1) a {
     position: absolute;
-    top:71%;
+    /* Maakt het element de child. */
+    top: 71%;
 }
 
 main section:nth-of-type(1) a:hover {
     animation-name: bounce-animation;
+    /* Add de animatie die ik gemaakt heb aan de button. */
     animation-timing-function: ease-out;
     animation-duration: .5s;
     transition-delay: .5s;
+    /* Zorgt ervoor dat de scale 1.02 pas ingaat nadat de animatie voorbij is. */
     transform: scale(1.02);
-    background-color: var(--darkred);
+    /* Houdt de button op de grote als de animatie voorbij is. */
+    background-color: var(--activebuttonred);
+}
+
+main section:nth-of-type(1)>img {
+    width: 100%;
 }
 
 main section:first-of-type>img:nth-of-type(2) {
-    width:70%;
+    width: 70%;
     margin-top: var(--margin-standard);
 }
 
@@ -349,49 +433,72 @@ main section:first-of-type>img:nth-of-type(2) {
 /* Featured section */
 /* ------------------------------------------------------------------------------------------------ */
 
+
 main section:nth-of-type(2) ul {
     display: flex;
-    gap: var(--margin-standard);
     overflow: scroll;
     margin: 1em 0 1em 0;
+    gap: var(--margin-standard);
+    padding-top: .5em;
 }
 
-main section:nth-of-type(2)>ul>li {
+main section:nth-of-type(2) a {
+    all: unset;
+}
+
+main section:nth-of-type(2)>ul>a>li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Zorgt ervoor dat er verticaal geflexed wordt. */
     list-style-type: none;
-    border: var(--divider) solid var(--grey);
+    border: var(--divider) solid var(--dividergrey);
     border-radius: .3em;
     width: 15em;
-    margin-top: .5em;
     padding-bottom: 1em;
-    transition:.2s;
-    min-height: 16em; /*Houdt het verspringen van de section tegen bij de transition tijdens het switchen van de hover. */
+    min-height: 16em;
+    /*Houdt het verspringen van de section tegen bij de transition tijdens het switchen van de hover. */
+    transition: .2s;
 }
 
-main section:nth-of-type(2)>ul>li:hover {
-    margin-top: 0;
-    color: var(--red);
-}
-
-main section:nth-of-type(2)>ul>li:first-of-type {
+main section:nth-of-type(2)>ul>a:first-of-type>li {
     margin-left: var(--margin-standard);
+    /* Zorgt ervoor dat er ruimte zit tussen de rand van het scherm en het eerste li item. */
 }
 
-main section:nth-of-type(2)>ul>li:last-of-type {
+main section:nth-of-type(2)>ul>a:last-of-type>li {
     margin-right: var(--margin-standard);
+    /* Zorgt ervoor dat er ruimte zit tussen de rand van het scherm en het eerste li item. */
 }
 
-main section:nth-of-type(2)>ul>li>img {
-    width:inherit;
+main section:nth-of-type(2)>ul>a>li>img {
+    width: inherit;
     border-radius: .3em .3em 0 0;
+    position: relative;
+    transition: .2s;
+    bottom: 0;
+    order: -1;
 }
 
-main section:nth-of-type(2)>ul>li>p,
-main section:nth-of-type(2)>ul>li>h3 {
-    margin:.5em 1em;
+main section:nth-of-type(2)>ul>a>li:hover>img,
+main section:nth-of-type(2)>ul>a:focus>li>img {
+    bottom: .5em;
+    /* Zorgt ervoor dat de image een stukje omhoog gaat op de hover of focus. */
 }
 
-main section:nth-of-type(2)>ul>li>p {
-    border-left: .2em solid var(--red);
+main section:nth-of-type(2)>ul>a>li>h3 {
+    position: absolute;
+    top: 8em;
+    left: 1em;
+    /* Positionering */
+}
+
+main section:nth-of-type(2)>ul>a>li>p {
+    position: absolute;
+    top: 13em;
+    left: 1em;
+    /* Positionering */
+    border-left: .2em solid var(--fontred);
     padding-left: .25em;
 }
 
@@ -401,25 +508,32 @@ main section:nth-of-type(2)>ul>li>p {
 /* ------------------------------------------------------------------------------------------------ */
 
 article:first-of-type {
-    border-top: var(--divider) solid var(--grey);
+    border-top: var(--divider) solid var(--dividergrey);
     padding: 1em 0 1em 0;
     display: flex;
     flex-direction: column;
 }
 
+article:first-of-type h2 {
+    order: 0;
+}
+
 article:first-of-type img {
     margin: var(--margin-standard);
+    order: 1;
 }
 
 article:first-of-type p {
     font-size: large;
     font-weight: var(--font-bold);
     margin: var(--margin-standard);
+    order: 2;
 }
 
 article:first-of-type a {
     padding: 0.7em 30%;
     align-self: center;
+    order: 3;
 }
 
 main>article>a:hover {
@@ -428,7 +542,7 @@ main>article>a:hover {
     animation-duration: .5s;
     transition-delay: .5s;
     transform: scale(1.02);
-    background-color: var(--darkred);
+    background-color: var(--activebuttonred);
 }
 
 
@@ -443,19 +557,16 @@ section:nth-of-type(3) {
 }
 
 section:nth-of-type(3) article {
-    margin:var(--margin-standard);
+    margin: var(--margin-standard);
     border-top: var(--reset);
+    display: flex;
+    flex-direction: column;
 }
 
 section:nth-of-type(3) article img {
     border-radius: .3em;
     margin: var(--reset);
-}
-
-section:nth-of-type(3) article a {
-    margin: var(--reset);
-    font-size: medium;
-    align-self: baseline;
+    order: -1;
 }
 
 section:nth-of-type(3) article p {
@@ -463,9 +574,10 @@ section:nth-of-type(3) article p {
     margin: 1em 0 1em 0;
 }
 
-section:nth-of-type(3) ul p {
-    font-weight: var(--font-regular);
-    font-size: small;
+section:nth-of-type(3) article a {
+    margin: var(--reset);
+    font-size: medium;
+    align-self: baseline;
 }
 
 section:nth-of-type(3) ul {
@@ -479,26 +591,29 @@ section:nth-of-type(3) ul {
     margin-top: var(--margin-standard);
 }
 
+section:nth-of-type(3) ul p {
+    font-weight: var(--font-regular);
+    font-size: small;
+}
+
 section:nth-of-type(3) li {
-    width:10em;
+    display: flex;
+    flex-direction: column;
 }
 
 section:nth-of-type(3) li img {
     width: 10em;
     border-radius: .3em;
-}
-
-section:nth-of-type(3) img:hover {
-    cursor: pointer;
-    filter: brightness(70%);
+    order: -1;
 }
 
 section:nth-of-type(3) a {
     font-size: small;
     padding: var(--reset);
-    background-color: var(--bg);
+    background-color: var(--background-site);
     color: var(--red);
     text-decoration: underline;
+    margin: .5em 0;
 }
 
 section:nth-of-type(3) ul h3 {
@@ -509,39 +624,50 @@ section:nth-of-type(3) ul h3 {
 section:nth-of-type(3)>a {
     align-self: center;
     justify-self: center;
-    background-color: var(--red);
-    padding:0.7em 20%;
+    background-color: var(--buttonred);
+    padding: 0.7em 20%;
     border-radius: .25em;
     font-size: larger;
     font-weight: var(--font-bold);
-    color: var(--bg);
+    color: var(--fontwhite);
     cursor: pointer;
     text-decoration: none;
+    margin-top: 1em;
 }
 
 section:nth-of-type(3)>a:hover {
     animation-name: bounce-animation;
     animation-timing-function: ease-out;
+    /* Zorgt ervoor dat de animatie "out eased" */
     animation-duration: .5s;
     transition-delay: .5s;
     transform: scale(1.02);
-    background-color: var(--darkred);
+    background-color: var(--activebuttonred);
 }
-
-
 
 
 /* ------------------------------------------------------------------------------------------------ */
 /* Characters tile section */
 /* ------------------------------------------------------------------------------------------------ */
 
+section:nth-of-type(4) a {
+    all: unset;
+}
+
+section:nth-of-type(4) a:focus {
+    color: var(--fontred);
+}
 
 section:nth-of-type(4) ul {
     display: grid;
+    /* Maakt een display grid aan */
     grid-template-columns: 10em 10em;
+    /* Breedte en hoogte van de grid vlakken */
     grid-row: auto auto;
     grid-column-gap: 1.5em;
+    /* Gap tussen de grid vlakken */
     grid-row-gap: var(--margin-standard);
+    /* Gap tussen de grid vlakken */
     list-style-type: none;
     justify-content: center;
     margin-top: var(--margin-standard);
@@ -550,6 +676,14 @@ section:nth-of-type(4) ul {
 section:nth-of-type(4) li {
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(4) h3 {
+    font-weight: var(--font-bold);
+    width: 80%;
+    order: 1;
 }
 
 section:nth-of-type(4) img {
@@ -557,12 +691,13 @@ section:nth-of-type(4) img {
 }
 
 section:nth-of-type(4) div {
-    width:10em;
-    height:10em;
+    width: 10em;
+    height: 10em;
     border-radius: .25em;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    order: 0;
 }
 
 section:nth-of-type(4) img:first-of-type {
@@ -571,26 +706,22 @@ section:nth-of-type(4) img:first-of-type {
 }
 
 section:nth-of-type(4) img:nth-of-type(2) {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: .4s;
 }
 
 section:nth-of-type(4) div:hover img:nth-of-type(2),
 section:nth-of-type(4) div:active img:nth-of-type(2) {
-    scale:1.2;
+    scale: 1.2;
 }
 
 section:nth-of-type(4) div:hover img:nth-of-type(1),
 section:nth-of-type(4) div:active img:nth-of-type(1) {
-    scale:1;
+    scale: 1;
 }
 
-section:nth-of-type(4) h3 {
-    font-weight: var(--font-bold);
-    width:80%;
-}
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
@@ -604,8 +735,8 @@ section:nth-of-type(4) h3 {
 /* ------------------------------------------------------------------------------------------------ */
 
 footer section:first-of-type {
-    background-color: var(--red);
-    height:12em;
+    background-color: var(--footerred);
+    height: 12em;
 }
 
 footer section:first-of-type ul:first-of-type {
@@ -614,25 +745,24 @@ footer section:first-of-type ul:first-of-type {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    scale:0.7;
+    scale: 0.7;
+}
+
+footer section:first-of-type ul:first-of-type li {
+    display: flex;
+    justify-content: center;
+    /* Zorgt ervoor dat de elementen verticaal centreren. */
+    width: 5em;
+    margin: .5em 0;
+    position: relative;
+    align-items: center;
 }
 
 footer section:first-of-type ul:first-of-type li:first-of-type {
     display: flex;
     justify-content: center;
-    width:100%;
+    width: 100%;
     margin: var(--margin-standard);
-}
-
-
-
-footer section:first-of-type ul:first-of-type li {
-    display: flex;
-    justify-content: center;
-    width: 5em;
-    margin: .5em 0;
-    position: relative;
-    align-items: center;
 }
 
 footer section:first-of-type ul:first-of-type li:first-of-type img {
@@ -671,16 +801,16 @@ footer section:nth-of-type(2) ul {
 }
 
 footer section:nth-of-type(2) h3 {
-    font-weight: 600;
+    font-weight: var(--font-bold);
 }
 
 footer section:nth-of-type(2) img {
-    height:6em;
+    height: 6em;
 }
 
 footer section:nth-of-type(2)>a {
-    background-color:var(--bg);
-    padding:var(--reset);
+    background-color: var(--background-site);
+    padding: var(--reset);
     font-size: medium;
     margin: var(--reset);
     cursor: pointer;
@@ -696,13 +826,14 @@ footer section:nth-of-type(2) ul li {
 footer section:nth-of-type(2) ul a {
     font-size: medium;
     padding: var(--reset);
-    background-color: var(--bg);
+    background-color: var(--background-site);
     color: var(--red);
 }
 
 footer section:nth-of-type(2) ul a:hover {
-    color: var(--darkred);
+    color: var(--activebuttonred);
     text-decoration: underline;
+    /* Zorgt ervoor dat de text een underline krijgt op hover */
 }
 
 
@@ -711,7 +842,41 @@ footer section:nth-of-type(2) ul a:hover {
 /* ------------------------------------------------------------------------------------------------ */
 
 footer section:nth-of-type(3) {
-    background-color: var(--darkgrey);
+    background-color: var(--footerdarkgrey);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7em;
+}
+
+footer section:nth-of-type(3) p,
+#pagina2 footer section:nth-of-type(3) p {
+    color: var(--fontwhite);
+    text-align: center;
+    margin: 2em;
+    font-size: x-small;
+}
+
+footer section:nth-of-type(3) ul {
+    display: flex;
+    gap: 1em;
+    margin: 0 1em;
+}
+
+footer section:nth-of-type(3) li {
+    width: auto;
+}
+
+footer section:nth-of-type(3) a {
+    all: unset;
+    font-size: x-small;
+    color: var(--fontwhite);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+footer section:nth-of-type(3) a:hover,
+footer section:nth-of-type(3) a:focus {
+    text-decoration: underline;
 }
 
 
@@ -723,7 +888,14 @@ footer section:nth-of-type(3) {
 /* ------------------------------------------------------------------------------------------------ */
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
 
-#pagina2 h1 {
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Pagina 2 General CSS */
+/* ------------------------------------------------------------------------------------------------ */
+
+#pagina2 h1,
+#pagina2 section:nth-of-type(4) h2,
+#pagina2 section:nth-of-type(5) h2 {
     font-size: 1.5em;
     font-weight: var(--font-bold);
     text-align: center;
@@ -734,9 +906,35 @@ footer section:nth-of-type(3) {
     border-image-width: 16px 100px;
     /* Eerste waarde is breedte in hoogte, tweede waarde breedte in de breedte */
     border-image-slice: 25%;
-    border-image-outset: .8em 0; 
+    /* Hoeveel procent hij van de zijkant en bovenkant van de border image neemt */
+    border-image-outset: .8em 0;
     /* Eerste waarde is ruimte tussen boven en onderkant, tweede waarde tussen links en rechts */
     border-image-source: url("../images/pagina2/kopborder.png");
+    /* De image die de border vervangt */
+}
+
+#pagina2 section:nth-of-type(4) h2,
+#pagina2 section:nth-of-type(5) h2 {
+    margin-left: var(--reset);
+    margin-top: 1em;
+    left: 4em;
+    right: 4em;
+}
+
+#pagina2 h4 {
+    font-size: 1.2em;
+    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: var(--reset);
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Video section */
+/* ------------------------------------------------------------------------------------------------ */
+
+#pagina2 main section:first-of-type {
+    background-image: var(--pokemon-bg1);
+    /* Zorgt ervoor dat de background van de section een afbeelding is. */
 }
 
 #pagina2 main section:first-of-type video {
@@ -744,15 +942,14 @@ footer section:nth-of-type(3) {
     height: 15em;
 }
 
-#pagina2 main section:first-of-type {
-    background-image: url("../images/pagina2/sectionbackground.avif");
-}
 
-#pagina2 h4 {
-    font-size: 1.2em;
-    margin: 1em;
-    margin-top: 2em;
-    margin-bottom: 0;
+/* ------------------------------------------------------------------------------------------------ */
+/* Way to play Section */
+/* ------------------------------------------------------------------------------------------------ */
+
+#pagina2 main section:nth-of-type(2) {
+    background-image: var(--pokemon-bg1);
+    /* Zorgt ervoor dat de background van de section een afbeelding is. */
 }
 
 #pagina2 main section:nth-of-type(2) ul {
@@ -761,11 +958,7 @@ footer section:nth-of-type(3) {
 
 #pagina2 main section:nth-of-type(2) ul li {
     min-height: 20em;
-    background-color: white;
-}
-
-#pagina2 main section:nth-of-type(2) {
-    background-image: url("../images/pagina2/sectionbackground.avif");
+    background-color: var(--background-site);
 }
 
 #pagina2 section:nth-of-type(2)>p {
@@ -774,13 +967,47 @@ footer section:nth-of-type(3) {
     margin-top: 4em;
 }
 
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Pokemon Carrousel Section */
+/* ------------------------------------------------------------------------------------------------ */
+
+#pagina2 section:nth-of-type(2) h4 {
+    position: absolute;
+    top: 10.5em;
+    /* Positionering */
+}
+
+#pagina2 section:nth-of-type(2) p {
+    top: 17em;
+    /* Positionering */
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Limited Edition Switch Section */
+/* ------------------------------------------------------------------------------------------------ */
+
+#pagina2 section:nth-of-type(3) p {
+    margin: 1em 4em;
+    text-align: left;
+}
+
+#pagina2 section:nth-of-type(3) h2 {
+    font-size: 2em;
+    margin: 1em 2em;
+    margin-bottom: 0;
+}
+
 #pagina2 section:nth-of-type(3) div {
     display: flex;
 }
 
 #pagina2 section:nth-of-type(3) div img {
-    height:1.5em;
+    height: 1.5em;
 }
+
+/* Limited Edition Switch Section DIVIDER */
 
 #pagina2 section:nth-of-type(3) img:nth-of-type(1) {
     margin-left: 1em;
@@ -795,19 +1022,14 @@ footer section:nth-of-type(3) {
     margin-right: 1em;
 }
 
-#pagina2 section:nth-of-type(3) p {
-    margin: 1em 4em;
-    text-align: left;
-}
 
-#pagina2 section:nth-of-type(3) h2 {
-    font-size: 2em;
-    margin: 1em 2em;
-    margin-bottom: 0;
-}
+/* ------------------------------------------------------------------------------------------------ */
+/* Media Section */
+/* ------------------------------------------------------------------------------------------------ */
 
 #pagina2 section:nth-of-type(4) {
-    background-image: url(../images/pagina2/sectionbackground2.avif);
+    background-image: var(--pokemon-bg2);
+    /* Zorgt ervoor dat de background van de section een afbeelding is. */
 }
 
 #pagina2 section:nth-of-type(4) p {
@@ -816,28 +1038,10 @@ footer section:nth-of-type(3) {
     margin-top: 6em;
 }
 
-#pagina2 section:nth-of-type(4) h2, #pagina2 section:nth-of-type(5) h2 {
-    font-size: 1.5em;
-    font-weight: var(--font-bold);
-    text-align: center;
-    position: absolute;
-    margin-left: 0;
-    margin-top: 1em;
-    left: 4em;
-    right: 4em;
-    border-style: solid;
-    border-image-width: 16px 100px;
-    /* Eerste waarde is breedte in hoogte, tweede waarde breedte in de breedte */
-    border-image-slice: 25%;
-    border-image-outset: .8em 0; 
-    /* Eerste waarde is ruimte tussen boven en onderkant, tweede waarde tussen links en rechts */
-    border-image-source: url("../images/pagina2/kopborder.png");
-}
-
 #pagina2 section:nth-of-type(4) ul {
     display: flex;
     overflow: auto;
-    gap:1em;
+    gap: 1em;
     list-style-type: none;
     justify-content: left;
 }
@@ -855,18 +1059,23 @@ footer section:nth-of-type(3) {
     margin-right: 1em;
 }
 
+#pagina2 section:nth-of-type(4) li img {
+    width: auto;
+    height: 5em;
+    scale: 1;
+    cursor: pointer;
+}
+
 #pagina2 section:nth-of-type(4)>img {
     width: 100%;
     scale: 1;
     padding: 1em;
 }
 
-#pagina2 section:nth-of-type(4) li img {
-    width: auto;
-    height: 5em;
-    scale:1;
-    cursor: pointer;
-}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Pokemon News Section */
+/* ------------------------------------------------------------------------------------------------ */
 
 #pagina2 section:nth-of-type(5) {
     display: flex;
@@ -874,7 +1083,7 @@ footer section:nth-of-type(3) {
 }
 
 #pagina2 section:nth-of-type(5) article {
-    margin:var(--margin-standard);
+    margin: var(--margin-standard);
     border-top: var(--reset);
 }
 
@@ -882,12 +1091,18 @@ footer section:nth-of-type(3) {
     border-radius: .3em;
     margin: var(--reset);
     margin-top: 5em;
+    order: -1;
 }
 
 #pagina2 section:nth-of-type(5) article a {
     margin: var(--reset);
     font-size: medium;
     align-self: baseline;
+    /* Zorgt ervoor dat het element zelf op de baseline wordt geplaatst. */
+}
+
+#pagina2 section:nth-of-type(5) article h3 {
+    order: 1;
 }
 
 #pagina2 section:nth-of-type(5) article p {
@@ -895,9 +1110,8 @@ footer section:nth-of-type(3) {
     margin: 1em 0 1em 0;
 }
 
-#pagina2 section:nth-of-type(5) ul p {
-    font-weight: var(--font-regular);
-    font-size: small;
+#pagina2 section:nth-of-type(5) article p:nth-of-type(1) {
+    order: 1;
 }
 
 #pagina2 section:nth-of-type(5) ul {
@@ -911,13 +1125,26 @@ footer section:nth-of-type(3) {
     margin-top: var(--margin-standard);
 }
 
+#pagina2 section:nth-of-type(5) ul h3 {
+    font-size: small;
+    font-weight: var(--font-bold);
+}
+
+#pagina2 section:nth-of-type(5) ul p {
+    font-weight: var(--font-regular);
+    font-size: small;
+}
+
 #pagina2 section:nth-of-type(5) li {
-    width:10em;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
 }
 
 #pagina2 section:nth-of-type(5) li img {
     width: 10em;
     border-radius: .3em;
+    order: -1;
 }
 
 #pagina2 section:nth-of-type(5) img:hover {
@@ -928,12 +1155,7 @@ footer section:nth-of-type(3) {
 #pagina2 section:nth-of-type(5) a {
     font-size: small;
     padding: var(--reset);
-    background-color: var(--bg);
+    background-color: var(--background-site);
     color: var(--red);
     text-decoration: underline;
-}
-
-#pagina2 section:nth-of-type(5) ul h3 {
-    font-size: small;
-    font-weight: var(--font-bold);
 }

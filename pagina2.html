@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logos/retromario.png">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Nintendo Unofficial Site | By Guido de Waal</title>
 </head>
+
 <body id="pagina2">
     <header>
-        <img src="images/logos/nintendologo.jpg" alt="nintendo logo" tabindex="0">
+        <a href="#">
+            <img src="images/logos/nintendologo.jpg" alt="nintendo logo">
+        </a>
         <nav>
             <ul>
-                <a id="hamburger">
+                <button id="hamburger" aria-label="Open Sub-Menu">
                     <li>
-                        <img src="images/icons/hamburger.png" alt="hamburger icon">
+                        <img src="images/icons/hamburger.png" alt="Open Sub-Menu">
+                    </li>
+                </button>
+                <a href="#" aria-label="Go to favourites">
+                    <li>
+                        <img src="images/icons/heart.png" alt="Go to Favourites">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Search">
                     <li>
-                        <img src="images/icons/heart.png" alt="heart icon">
+                        <img src="images/icons/search.png" alt="Search">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="Go to Shoppingcart">
                     <li>
-                        <img src="images/icons/search.png" alt="search icon">
+                        <img src="images/icons/shoppingcart.png" alt="Go to Shoppingcart">
                     </li>
                 </a>
-                <a href="#">
+                <a href="#" aria-label="My Account">
                     <li>
-                        <img src="images/icons/shoppingcart.png" alt="shoppingcart icon">
-                    </li>
-                </a>
-                <a href="#">
-                    <li>
-                        <img src="images/icons/miiicon.png" alt="mii icon">
+                        <img src="images/icons/miiicon.png" alt="My Account">
                     </li>
                 </a>
             </ul>
@@ -45,60 +51,56 @@
                 <li>
                     <a>
                         <h2>Menu</h2>
-                        <button>
+                        <button id="close" aria-label="Close Sub-Menu">
                             <img src="images/icons/close.png" alt="Close Menu">
                         </button>
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/mynintendo.png" alt="My Nintendo Store">
+                    <a href="#" aria-label="My Nintendo Store">
                         <h3>My Nintendo Store</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/mynintendo.png" alt="My Nintendo Store">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/holiday.png" alt="">
+                    <a href="#" aria-label="Holiday Gift Guide">
                         <h3>Holiday Gift Guide</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/holiday.png" alt="Holdiday gift guide">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/games.png" alt="">
+                    <a href="#" aria-label="Games">
                         <h3>Games</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/games.png" alt="Games">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/switch.png" alt="">
+                    <a href="#" aria-label="Nintendo Switch">
                         <h3>Nintendo Switch</h3>
+                        <img src="images/icons/switch.png" alt="Nintendo Switch">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/news.png" alt="">
+                    <a href="#" aria-label="News & Events">
                         <h3>News & Events</h3>
-                        <img src="" alt="">
+                        <img src="images/icons/news.png" alt="News & Events">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/playnintendo.png" alt="">
+                    <a href="#" aria-label="Play Nintendo">
                         <h3>Play Nintendo</h3>
+                        <img src="images/icons/playnintendo.png" alt="Play Nintendo">
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/support.png" alt="">
+                    <a href="#" aria-label="Support">
                         <h3>Support</h3>
-                        </a>
+                        <img src="images/icons/support.png" alt="Support">
+                    </a>
                 </li>
                 <li>
-                    <a href="">
-                        <img src="images/icons/flag.png" alt="">
+                    <a href="#" aria-label="Change Region">
+                        <img src="images/icons/flag.png" alt="Change Region">
                         <h3>Change Region</h3>
                     </a>
                 </li>
@@ -113,53 +115,64 @@
 
     <main>
         <section>
-            <video controls poster="images/pagina2/trailerthumbnail.png" aria-label="video pokemon scarlet and violet trailer">
+            <!-- Video viewer. -->
+            <video controls poster="images/pagina2/trailerthumbnail.png"
+                aria-label="video pokemon scarlet and violet trailer, press enter to play">
                 <source src="videos/pokemon trailer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <!-- Videobron. Kwaliteit is laag, github kan maar 25mb per file aan. -->
+                Your browser does not support videos.
         </section>
         <section>
             <h1>Choose your way to play</h1>
-            <p>Explore a wide-open world at your own pace, battle and try to catch wild Pokémon, 
-                and encounter the Legendary Pokémon Koraidon in the Pokémon Scarlet game and Miraidon 
+            <p>Explore a wide-open world at your own pace, battle and try to catch wild Pokémon,
+                and encounter the Legendary Pokémon Koraidon in the Pokémon Scarlet game and Miraidon
                 in the Pokémon Violet game. Which will you choose? Games sold separately unless otherwise noted.
             </p>
             <ul>
-                <li tabindex="0">
-                    <img src="images/pagina2/scarlet.avif" alt="Pokemon Scarlet">
-                    <h3>Pokémon™ Scarlet</h3>
-                    <h4>$59.99</h4>
-                    <p>Nintendo Switch</p>
-                </li>
-                <li tabindex="0">
-                    <img src="images/pagina2/violet.avif" alt="Pokemon Violet">
-                    <h3>Pokémon™ Violet</h3>
-                    <h4>$59.99</h4>
-                    <p>Nintendo Switch</p>
-                </li>
-                <li tabindex="0">
-                    <img src="images/pagina2/both.avif" alt="Pokemon Scarlet and Pokemon Violet Duo Pack">
-                    <h3>Pokémon Scarlet and Pokémon Violet</h3>
-                    <h4>$119.99</h4>
-                    <p>Nintendo Switch</p>
-                </li>
+                <a href="#" aria-label="Pokemon Scarlet $59.99">
+                    <li>
+                        <h3>Pokémon™ Scarlet</h3>
+                        <h4>$59.99</h4>
+                        <p>Nintendo Switch</p>
+                        <img src="images/pagina2/scarlet.avif" alt="Pokemon Scarlet">
+                    </li>
+                </a>
+                <a href="#" aria-label="Pokemon Violet $59.99">
+                    <li>
+                        <h3>Pokémon™ Violet</h3>
+                        <h4>$59.99</h4>
+                        <p>Nintendo Switch</p>
+                        <img src="images/pagina2/violet.avif" alt="Pokemon Violet">
+                    </li>
+                </a>
+                <a href="#" aria-label="Pokemon Scarlet and Violet Duopack $119.99">
+                    <li>
+                        <h3>Pokémon Scarlet and Pokémon Violet</h3>
+                        <h4>$119.99</h4>
+                        <p>Nintendo Switch</p>
+                        <img src="images/pagina2/both.avif" alt="Pokemon Scarlet and Pokemon Violet Duo Pack">
+                    </li>
+                </a>
             </ul>
         </section>
         <section>
-            <div>
+            <div aria-hidden="true">
+                <!-- Aria-hidden zorgt ervoor dat het element niet wordt voorgelezen door een screenreader. -->
                 <img tabindex="-1" src="images/pagina2/divleft.avif" alt="DividerLeft">
+                <!-- tabindex -1 zorgt ervoor dat het element niet tabbaar is. -->
                 <img tabindex="-1" src="images/pagina2/divcenter.avif" alt="DividerCenter">
                 <img tabindex="-1" src="images/pagina2/divleft.avif" alt="DividerRight">
             </div>
             <h2>Nintendo Switch – OLED Model: Pokémon Scarlet & Violet Edition</h2>
             <p>
-                The Nintendo Switch – OLED Model: Pokémon Scarlet & Violet Edition system features 
-                special illustrations of the Legendary Pokémon appearing in the Pokémon Scarlet and 
-                Pokémon Violet games, Koraidon and Miraidon, as well as the partner Pokémon Sprigatito, 
+                The Nintendo Switch – OLED Model: Pokémon Scarlet & Violet Edition system features
+                special illustrations of the Legendary Pokémon appearing in the Pokémon Scarlet and
+                Pokémon Violet games, Koraidon and Miraidon, as well as the partner Pokémon Sprigatito,
                 Fuecoco, and Quaxly.
             </p>
             <a href="#">Learn more</a>
             <img src="images/pagina2/box.avif" alt="Pokemon Scarlet and Violet Box Showcase">
-            <div>
+            <div aria-hidden="true">
                 <img tabindex="-1" src="images/pagina2/divleft.avif" alt="DividerLeft">
                 <img tabindex="-1" src="images/pagina2/divcenter.avif" alt="DividerCenter">
                 <img tabindex="-1" src="images/pagina2/divleft.avif" alt="DividerRight">
@@ -170,71 +183,73 @@
             <p>
                 Check out the latest videos, screenshots, and more from the Pokemon Scarlet and Pokemon Violet games.
             </p>
-            <img id="Mainscreenshot" src="images/pagina2/screenshot0.avif" alt="">
+            <img id="Mainscreenshot" src="images/pagina2/screenshot0.avif" alt="Selected Screenshot">
+            <!-- Hoofd afbeelding die aangepast wordt dmv javascript. -->
             <ul>
                 <li>
-                    <img id="screenshot0" src="images/pagina2/screenshot0.avif" alt="">
+                    <img id="screenshot0" src="images/pagina2/screenshot0.avif" alt="Pokemon Screenshot 1">
                 </li>
                 <li>
-                    <img id="screenshot1" src="images/pagina2/screenshot1.avif" alt="">
+                    <img id="screenshot1" src="images/pagina2/screenshot1.avif" alt="Pokemon Screenshot 2">
                 </li>
                 <li>
-                    <img id="screenshot2" src="images/pagina2/screenshot2.avif" alt="">
+                    <img id="screenshot2" src="images/pagina2/screenshot2.avif" alt="Pokemon Screenshot 3">
                 </li>
                 <li>
-                    <img id="screenshot3" src="images/pagina2/screenshot3.avif" alt="">
+                    <img id="screenshot3" src="images/pagina2/screenshot3.avif" alt="Pokemon Screenshot 4">
                 </li>
                 <li>
-                    <img id="screenshot4" src="images/pagina2/screenshot4.avif" alt="">
+                    <img id="screenshot4" src="images/pagina2/screenshot4.avif" alt="Pokemon Screenshot 5">
                 </li>
                 <li>
-                    <img id="screenshot5" src="images/pagina2/screenshot5.avif" alt="">
+                    <img id="screenshot5" src="images/pagina2/screenshot5.avif" alt="Pokemon Screenshot 6">
                 </li>
             </ul>
         </section>
         <section>
             <h2>News</h2>
             <article>
-                <img src="images/pagina2/news1.avif" alt="Tunic">
                 <time>
                     <p>11/08/22</p>
                 </time>
                 <h3>New Pokémon Scarlet and Pokémon Violet details revealed, including more on Tera...</h3>
                 <p>More details were revealed today about the highly anticipated Pokémon™ Scarlet and Pokémon...</p>
-                <a href="#" aria-label="Read more about Tunic">Read More</a>
+                <a href="#" aria-label="Read new details about pokemon scarlet and pokemon violet">Read More</a>
+                <img src="images/pagina2/news1.avif" alt="Pokemon Scarlet and Pokemon Violet">
             </article>
             <ul>
                 <li>
-                    <img src="images/pagina2/news2.avif" alt="Beary Good Games">
                     <time>
                         <p>09/29/22</p>
                     </time>
                     <h3>A Diglett that dwells in the sea?! Not Quite! Discover Wiglett, a...</h3>
-                    <a href="#" aria-label="Read more about beary good games">Read More</a>
+                    <a href="#" aria-label="Read more about Wiglett">Read More</a>
+                    <img src="images/pagina2/news2.avif" alt="Picture of Wiglett">
                 </li>
                 <li>
-                    <img src="images/pagina2/news3.avif" alt="Splatoon 3 Splatfest">
                     <time>
                         <p>09/07/22</p>
                     </time>
-                    <h3>Nintendo announces Nintendo Switch – OLED model: Pokémon Scarlet & Violet Edition, launching this November</h3>
-                    <a href="#" aria-label="Read more about Splatoon 3 Splatfest">Read More</a>
+                    <h3>Nintendo announces Nintendo Switch – OLED model: Pokémon Scarlet & Violet Edition, launching
+                        this November</h3>
+                    <a href="#" aria-label="Read more about the new switcch oled model">Read More</a>
+                    <img src="images/pagina2/news3.avif" alt="Switch OLED Pokemon Edition">
                 </li>
                 <li>
-                    <img src="images/pagina2/news4.avif" alt="Pikmon 3 Deluxe">
                     <time>
                         <p>09/07/22</p>
                     </time>
                     <h3>New characters, Pokémon, and features revealed for Pokémon Scarlet and Pokémon Violet</h3>
-                    <a href="#" aria-label="Read more about Pikmin 3 Deluxe sale">Read More</a>
+                    <a href="#" aria-label="Read more about new characters, pokemon and features">Read More</a>
+                    <img src="images/pagina2/news4.avif" alt="new features">
                 </li>
                 <li>
-                    <img src="images/pagina2/news5.avif" alt="Taiko no Tatsujin">
                     <time>
                         <p>08/22/22</p>
                     </time>
                     <h3>Top Pokémon Competitors Crowned at the 2022 Pokémon World Championships</h3>
-                    <a href="#" aria-label="Read more about Taiko no Tatsujin: Rhythm Festival">Read More</a>
+                    <a href="#" aria-label="Read more about the top pokemon competitors">Read More</a>
+                    <img src="images/pagina2/news5.avif" alt="pokemon competitors logo">
                 </li>
             </ul>
         </section>
@@ -271,7 +286,7 @@
                 <li>
                     <a href="https://www.youtube.com/nintendo" aria-label="Link to Nintendo's Youtube">
                         <img src="images/logos/youtube_logo_footer.png" alt="Youtube Logo">
-                    </a> 
+                    </a>
                 </li>
             </ul>
         </section>
@@ -307,33 +322,41 @@
                     <a href="#">Nintendo Product Recycling</a>
                 </li>
             </ul>
-            <a href="https://www.esrb.org/EPCConfirm/891/">
+            <a href="https://www.esrb.org/EPCConfirm/891/" aria-label="Go to ESRB's website">
                 <img src="images/esrb_privacy.png" alt="esrb privacy link">
             </a>
         </section>
         <section>
             <p>
-
+                © Nintendo.
+                Games are property of their respective owners.
+                Nintendo of America Inc. Headquarters are in Redmond, Washington, USA
             </p>
             <ul>
                 <li>
-
+                    <a href="#">
+                        Contact us
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Website feedback
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Terms of Use
+                    </a>
                 </li>
                 <li>
-
+                    <a href="#">
+                        Documents & Policies
+                    </a>
                 </li>
             </ul>
-
-            <img src="" alt="">
-            <p></p>
         </section>
     </footer>
-<script src="scripts/script.js"></script>    
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
