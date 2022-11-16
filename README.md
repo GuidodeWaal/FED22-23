@@ -39,12 +39,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   nintendo.com
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
+  Nintendo main page  
   <img src="readme-images/hele_pagina1.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/screenshotsite2.jpg" width="375px" alt="omschrijving van de pagina">
+  Pokemon Scarlet and Violet page 
+  <img src="readme-images/hele_pagina2.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -141,8 +141,8 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | flexorder      | video              | Niks         | positions        |
+  |                |                    |              | flex             |
   | ...            | ...                | ...          | ...              |
 
 
@@ -216,12 +216,10 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
+  Ik kan een div element gebruiken voor de doorzichtige achtergrond achter het menu. Dat kan echter ook een button zijn. Met div heb ik al eerder gewerkt dus ik denk dat ik dat ga gebruiken. We hebben even naar dark mode gekeken. Docent zei dat mijn code tot nu toe netjes was.
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Div gebruiken voor backdrop.
+  - Goede vragen gesteld.
 
 </details>
 
@@ -236,16 +234,32 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
 
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Mijn denkwijze rondom het coderen is sterk veranderd. Veel wat ik deed voorheen, was gebasseerd op trial and error.
+  Nu kan ik van tevoren in mijn hoofd al bedenken wat ik ongeveer moet coderen.
+  Ook snap ik nu hoe geneste elementen werken in css en de positions.
+  De standaard css gaat me nu heel goed af, gevormde problemen vindt ik wel lastiger te fixen.
+  Op een gegeven moment, met elke stap vooruit ging ik er twee achteruit.
+  Uiteindelijk heb ik wel de meeste dingen kunne fixen.
+  Al in al snap ik nu veel meer van css en javascript.
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  2 dingen zijn niet gelukt.
+  De backdrop van het opgenklapte nav menu klikbaar maken.
+  Ik heb hier javascript voor geschreven en zelfs geprobeerd de html,body klikbaar te maken met een if else statement.
+  Maar niks lukte. Advies hoe dit de volgende keer zou kunnen zou fijn zijn.
+  Ik heb het namelijk eerder gemaakt. Toen werkte het wel, op dezelfde manier als dat ik geprobeerd heb.
+  
+  Het andere ding dat niet lukte was de focus state van list elementen in het carrousel mooi te maken.
+  Op een gegeven moment zag het er heel goed uit. Na wat meer coderen werd het helemaal verpest.
+  En ik kan de bug niet vinden. Ik heb geprobeerd met element inspecteren te kijken, code aangepast, teruggekeken naar inherits, maar ik kon niets vinden.
+  Wat ik erg jammer vindt. Omdat, het natuurlijk an sich niet erg ingewikkeld is.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
