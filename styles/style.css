@@ -485,6 +485,10 @@ main section:nth-of-type(2)>ul>a:focus>li>img {
     /* Zorgt ervoor dat de image een stukje omhoog gaat op de hover of focus. */
 }
 
+main section:nth-of-type(2)>ul>a>li:hover>h3 {
+    color: var(--fontred);
+}
+
 main section:nth-of-type(2)>ul>a>li>h3 {
     position: absolute;
     top: 8em;
