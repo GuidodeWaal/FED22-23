@@ -260,6 +260,8 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   Op een gegeven moment zag het er heel goed uit. Na wat meer coderen werd het helemaal verpest.
   En ik kan de bug niet vinden. Ik heb geprobeerd met element inspecteren te kijken, code aangepast, teruggekeken naar inherits, maar ik kon niets vinden.
   Wat ik erg jammer vindt. Omdat, het natuurlijk an sich niet erg ingewikkeld is.
+  
+  Een andere wat meer "optionele" is dat het menu niet helemaal mooi opent en sluit. Ook hier kon ik niet vinden wat er voor zorgde.
 
   <img src="readme-images/lelijkefocusstate.png" width="375px" alt="bummer">
 </details>
@@ -276,7 +278,10 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
   1. https://css-tricks.com/content-jumping-avoid/
-  2. pngitem.com (voor de logo's van de footer.
-  3. ...
+  2. pngitem.com (voor de logo's van de footer.)
+  3. https://www.nintendo.com/ voor alle content
+  4. https://www.youtube.com/watch?v=7vzgCFtgV0o de video die ik gebruikt heb in mijn website.
+  5. Iconen voor het navigatiemenu heb ik zelf gemaakt in photoshop.
+  6. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ Natuurlijk voor wat extra flex uitleg.
 
 </details>
