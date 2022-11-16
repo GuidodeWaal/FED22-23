@@ -247,6 +247,13 @@ Ik moet vooral ook op de order van de html elementen letten. Ik heb nu alles op 
   Op een gegeven moment, met elke stap vooruit ging ik er twee achteruit.
   Uiteindelijk heb ik wel de meeste dingen kunne fixen.
   Al in al snap ik nu veel meer van css en javascript.
+  
+  ### Wat heb ik veranderd voor toegankelijkheid:
+  Ik heb een flexorder toegevoegd, in de origenele site was dit niet het geval.
+  Ook heb ik overal aria labels toegevoegd. De originele site had bijvoorbeeld een read more button, maar er werd niet voorgelezen waar je meer over te weten zou komen. Dit heb ik geprobeerd op te lossen met een aria-label.
+  Ik heb geprobeerd tekst wat groter en dikker te maken, zonder dat het visueel storend wordt.
+  Ook heb ik geprobeerd overal een duidelijke focus state te maken, ook in het menu.
+  Ik heb ook geprobeerd de margins wat groter te houden, waardoor dingen wat duidelijker worden.
 
 
   ### Dit was lastig/Is niet gelukt:
